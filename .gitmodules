@@ -1,3 +1,6 @@
 [submodule "TileSpGEMM"]
 	path = TileSpGEMM
 	url = https://github.com/SuperScientificSoftwareLaboratory/TileSpGEMM.git
+[submodule "GPU_SPGEMM"]
+	path = GPU_SPGEMM
+	url = https://github.com/saltsystemslab/GPU_SPGEMM.git
