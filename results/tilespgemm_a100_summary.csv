@@ -1,0 +1,37 @@
+Matrix,Operation,TileSpGEMM_ms,TileSpGEMM_GFlops,cuSPARSE_ms,cuSPARSE_GFlops,Speedup_vs_cuSPARSE,Notes
+pdb1HYS,A^2,28.64,38.78,36.06,30.80,1.26x,
+pdb1HYS,AA^T,-,-,-,-,-,symmetric matrix (skipped by code)
+consph,A^2,19.07,48.65,42.79,21.68,2.24x,
+consph,AA^T,-,-,-,-,-,symmetric matrix (skipped by code)
+cant,A^2,10.86,49.65,32.69,16.49,3.01x,
+cant,AA^T,-,-,-,-,-,symmetric matrix (skipped by code)
+pwtk,A^2,24.69,50.71,47.82,26.19,1.94x,segfault in verification step
+pwtk,AA^T,-,-,-,-,-,symmetric matrix (skipped by code)
+rma10,A^2,9.58,32.67,21.91,14.28,2.29x,
+rma10,AA^T,9.79,31.98,22.18,14.11,2.27x,
+conf5_4-8x8-05,A^2,5.97,25.05,17.82,8.39,2.99x,
+conf5_4-8x8-05,AA^T,6.17,24.25,18.05,8.28,2.93x,
+shipsec1,A^2,20.72,43.50,44.95,20.05,2.17x,
+shipsec1,AA^T,-,-,-,-,-,symmetric matrix (skipped by code)
+mac_econ_fwd500,A^2,9.57,1.58,14.16,1.07,1.48x,
+mac_econ_fwd500,AA^T,10.72,2.90,14.50,2.15,1.35x,
+mc2depi,A^2,-,-,-,-,-,DNF: bitmask computation >600s (525K rows too large for O(n^2) bitmask)
+mc2depi,AA^T,-,-,-,-,-,DNF: bitmask computation >600s (525K rows too large for O(n^2) bitmask)
+cop20k_A,A^2,57.75,2.77,16.21,9.86,0.28x,cuSPARSE faster (very sparse tiles)
+cop20k_A,AA^T,-,-,-,-,-,symmetric matrix (skipped by code)
+scircuit,A^2,9.09,1.91,14.71,1.18,1.62x,segfault in verification step
+scircuit,AA^T,8.84,1.96,12.98,1.34,1.47x,
+webbase-1M,A^2,-,-,-,-,-,DNF: bitmask computation >600s (1M rows too large for O(n^2) bitmask)
+webbase-1M,AA^T,-,-,-,-,-,DNF: bitmask computation >600s (1M rows too large for O(n^2) bitmask)
+af_shell10,A^2,-,-,-,-,-,DNF: bitmask computation >600s (1.5M rows too large for O(n^2) bitmask)
+af_shell10,AA^T,-,-,-,-,-,symmetric matrix (skipped by code)
+pkustk12,A^2,100.97,53.09,12.79,419.09,0.13x,cuSPARSE much faster
+pkustk12,AA^T,-,-,-,-,-,symmetric matrix (skipped by code)
+SiO2,A^2,448.39,63.61,10.98,2598.39,0.02x,cuSPARSE much faster
+SiO2,AA^T,-,-,-,-,-,symmetric matrix (skipped by code)
+case39,A^2,85.90,94.26,12.11,668.80,0.14x,cuSPARSE much faster
+case39,AA^T,-,-,-,-,-,symmetric matrix (skipped by code)
+TSOPF_FS_b300_c2,A^2,817.79,131.93,10.51,10263.92,0.01x,cuSPARSE much faster
+TSOPF_FS_b300_c2,AA^T,-,-,-,-,-,symmetric matrix (skipped by code)
+gupta3,A^2,781.88,78.57,11.49,5344.70,0.01x,cuSPARSE much faster
+gupta3,AA^T,-,-,-,-,-,symmetric matrix (skipped by code)

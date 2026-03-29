@@ -1,0 +1,33 @@
+=== TileSpGEMM Benchmark (remaining matrices) ===
+Date: Sun Mar 29 02:16:42 MDT 2026
+Host: notch348
+NVIDIA A100 80GB PCIe, 81920 MiB, 580.105.08
+Timeout: 600s per run
+==========================================
+
+=== C=A^2: mc2depi ===
+--------------------------------!!!!!!!!------------------------------------
+device_id = 0
+---------------------------------------------------------------
+Device [ 0 ] NVIDIA A100 80GB PCIe @ 1410.00 MHz
+MAT: -------------- /scratch/general/vast/u1446071/spgemm_matrices/mc2depi.mtx --------------
+input matrix A: ( 525825, 525825 ) nnz = 2100225
+ loadfile time    = 0.45819 sec
+the tilesize = 16
+SpGEMM nnzCub = 8391680
+CSR to Tile conversion uses 368.47 ms
+tile space overhead = 26.89 MB
+[ERROR] mc2depi A^2 failed (exit=124)
+
+=== C=AA^T: mc2depi ===
+--------------------------------!!!!!!!!------------------------------------
+device_id = 0
+---------------------------------------------------------------
+Device [ 0 ] NVIDIA A100 80GB PCIe @ 1410.00 MHz
+MAT: -------------- /scratch/general/vast/u1446071/spgemm_matrices/mc2depi.mtx --------------
+input matrix A: ( 525825, 525825 ) nnz = 2100225
+ loadfile time    = 0.45639 sec
+the tilesize = 16
+SpGEMM nnzCub = 8391681
+CSR to Tile conversion uses 262.10 ms
+tile space overhead = 26.89 MB
