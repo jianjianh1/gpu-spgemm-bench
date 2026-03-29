@@ -24,7 +24,8 @@ mkdir -p "$RESULTS_DIR"
 echo "=== Building on compute node ==="
 cd "$SRCDIR"
 make clean 2>/dev/null || true
-make
+make CUDA_INSTALL_PATH="$CUDA_HOME" \
+     NVCC_FLAGS="-O3 -w -gencode=arch=compute_75,code=sm_75 -gencode=arch=compute_80,code=sm_80 -gencode=arch=compute_86,code=sm_86"
 cd -
 
 BINARY="$SRCDIR/test"
@@ -70,13 +71,13 @@ for mat in "${MATRICES[@]}"; do
 
     echo "" | tee -a "$RESULT_FILE"
     echo "=== C=A^2: $mat ===" | tee -a "$RESULT_FILE"
-    timeout 120 stdbuf -oL "$BINARY" -d 0 -aat 0 "$MTX" 2>&1 | tee -a "$RESULT_FILE"
+    timeout 300 stdbuf -oL "$BINARY" -d 0 -aat 0 "$MTX" 2>&1 | tee -a "$RESULT_FILE"
     RC=${PIPESTATUS[0]}
     [ $RC -ne 0 ] && echo "[ERROR] $mat A^2 failed (exit=$RC)" | tee -a "$RESULT_FILE"
 
     echo "" | tee -a "$RESULT_FILE"
     echo "=== C=AA^T: $mat ===" | tee -a "$RESULT_FILE"
-    timeout 120 stdbuf -oL "$BINARY" -d 0 -aat 1 "$MTX" 2>&1 | tee -a "$RESULT_FILE"
+    timeout 300 stdbuf -oL "$BINARY" -d 0 -aat 1 "$MTX" 2>&1 | tee -a "$RESULT_FILE"
     RC=${PIPESTATUS[0]}
     [ $RC -ne 0 ] && echo "[ERROR] $mat AA^T failed (exit=$RC)" | tee -a "$RESULT_FILE"
 done
