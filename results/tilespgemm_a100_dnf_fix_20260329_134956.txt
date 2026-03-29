@@ -1,0 +1,194 @@
+=== TileSpGEMM DNF Fix Benchmark ===
+Date: Sun Mar 29 13:49:56 MDT 2026
+NVIDIA A100 80GB PCIe, 81920 MiB
+==========================================
+
+=== C=A^2: mc2depi ===
+--------------------------------!!!!!!!!------------------------------------
+device_id = 0
+---------------------------------------------------------------
+Device [ 0 ] NVIDIA A100 80GB PCIe @ 1410.00 MHz
+MAT: -------------- /scratch/general/vast/u1446071/spgemm_matrices/mc2depi.mtx --------------
+input matrix A: ( 525825, 525825 ) nnz = 2100225
+ loadfile time    = 0.45745 sec
+the tilesize = 16
+SpGEMM nnzCub = 8391680
+CSR to Tile conversion uses 78.16 ms
+tile space overhead = 26.89 MB
+  col_major: tilem=32865, tilen=32865
+  col_major: transpose+step1(BT) 19.97 ms
+  col_major: step2(BT) 1.92 ms, BT->numtile=163676
+  col_major: step1(mat) 0.63 ms, numtile=163676
+  col_major: flag+alloc 10.10 ms
+  col_major: sort 8.04 ms
+  col_major: inner loop 69.28 ms
+csr2tile_col_major uses 110.00 ms
+bitmask alloc: lengthA=33785220 (128 MB), blk_intersec_bitmask_len=1028
+bitmask_A fill uses 48.88 ms
+bitmask_B fill uses 48.58 ms
+bitmask H2D copy uses 27.02 ms (257 MB total)
+  GPU memory: 80400 MB free / 81153 MB total
+entering GPU SpGEMM kernel loop (REPEAT_NUM=1, blkmA=32865, blknB=32865, bitmask_len=1028)
+  max_intprod=25, bin_sizes=[32865,0,0,0,0,0,0]
+  set_row_nnz done, numblkC=457835
+  set_min_bin done, max_nz=15
+  calling calculate_value_col_bin (blkmB=32865)
+    calc_val_col_bin: case 0, GS=514, BS=256, bin_size=32865, bin_offset=0, PWARP=4
+    calc_val_col_bin: case 0 done
+  calculate_value_col_bin done
+step1 ----Calculate the number and tile-column index of tiles of matrixC---
+step1 ---------------------- Runtime is  10.37 ms-------------------------
+
+step2 --------Calculate the number of nonzeros of each tile of matrixC-----
+step2 ---------------------- Runtime is  1.24 ms-------------------------
+
+step3 ---------Calculate the val&col of nonzeros of matrixC-------------
+step3 ---------------------- Runtime is  0.95 ms------------------------
+
+-----------------------Malloc uses 0.80 ms-------------------------------
+Non-empty tiles of C = 457835
+nnzC = 5184166
+CUDA  TileSpGEMM runtime is 13.39 ms, gflops = 1.25
+-------------------------------check----------------------------------------
+tile to CSR conversion complete!
+
+--------------- SpGEMM (using cuSPARSE) ---------------
+ - cuda SpGEMM start! Benchmark runs 1 times.
+ - cuda SpGEMM completed!
+
+nnzC = 5245952, nnzCub = 8391680, Compression rate = 1.60
+CUDA  cuSPARSE SpGEMM runtime is 14.5570 ms, GFlops = 1.1529
+
+Validating results...
+[NOT PASSED] nnzC = 5245952, nnzC_golden = 5184166
+[NOT PASSED] row_pointer, #err = 525816
+[NOT PASSED] column_index & value, #err = 5245674 (99.99% #nnz)
+---------------------------------------------------------------
+---------------------------------------------------------------
+
+=== C=A^2: webbase-1M ===
+--------------------------------!!!!!!!!------------------------------------
+device_id = 0
+---------------------------------------------------------------
+Device [ 0 ] NVIDIA A100 80GB PCIe @ 1410.00 MHz
+MAT: -------------- /scratch/general/vast/u1446071/spgemm_matrices/webbase-1M.mtx --------------
+input matrix A: ( 1000005, 1000005 ) nnz = 3105536
+ loadfile time    = 0.97015 sec
+the tilesize = 16
+SpGEMM nnzCub = 69524195
+CSR to Tile conversion uses 222.51 ms
+tile space overhead = 45.92 MB
+  col_major: tilem=62501, tilen=62501
+  col_major: transpose+step1(BT) 44.25 ms
+  col_major: step2(BT) 25.43 ms, BT->numtile=356182
+  col_major: step1(mat) 2.33 ms, numtile=356182
+  col_major: flag+alloc 17.03 ms
+  col_major: sort 6.39 ms
+  col_major: inner loop 366.76 ms
+csr2tile_col_major uses 462.28 ms
+bitmask alloc: lengthA=122126954 (465 MB), blk_intersec_bitmask_len=1954
+bitmask_A fill uses 128.60 ms
+bitmask_B fill uses 105.71 ms
+bitmask H2D copy uses 140.23 ms (931 MB total)
+  GPU memory: 79694 MB free / 81153 MB total
+entering GPU SpGEMM kernel loop (REPEAT_NUM=1, blkmA=62501, blknB=62501, bitmask_len=1954)
+  max_intprod=34113, bin_sizes=[37513,23050,1367,395,111,48,17]
+  set_row_nnz done, numblkC=3447647
+  set_min_bin done, max_nz=8732
+  calling calculate_value_col_bin (blkmB=62501)
+    calc_val_col_bin: case 0, GS=453, BS=256, bin_size=28939, bin_offset=0, PWARP=4
+    calc_val_col_bin: case 0 done
+  calculate_value_col_bin done
+step1 ----Calculate the number and tile-column index of tiles of matrixC---
+step1 ---------------------- Runtime is  10.39 ms-------------------------
+
+step2 --------Calculate the number of nonzeros of each tile of matrixC-----
+step2 ---------------------- Runtime is  8.76 ms-------------------------
+
+step3 ---------Calculate the val&col of nonzeros of matrixC-------------
+step3 ---------------------- Runtime is  13.12 ms------------------------
+
+-----------------------Malloc uses 1.04 ms-------------------------------
+Non-empty tiles of C = 3447647
+nnzC = 18857946
+CUDA  TileSpGEMM runtime is 33.34 ms, gflops = 4.17
+-------------------------------check----------------------------------------
+tile to CSR conversion complete!
+
+--------------- SpGEMM (using cuSPARSE) ---------------
+ - cuda SpGEMM start! Benchmark runs 1 times.
+ - cuda SpGEMM completed!
+
+nnzC = 51111996, nnzCub = 69524195, Compression rate = 1.36
+CUDA  cuSPARSE SpGEMM runtime is 26.1470 ms, GFlops = 5.3179
+
+Validating results...
+[NOT PASSED] nnzC = 51111996, nnzC_golden = 18857946
+[NOT PASSED] row_pointer, #err = 1000002
+[NOT PASSED] column_index & value, #err = 51111836 (100.00% #nnz)
+---------------------------------------------------------------
+---------------------------------------------------------------
+
+=== C=A^2: af_shell10 ===
+--------------------------------!!!!!!!!------------------------------------
+device_id = 0
+---------------------------------------------------------------
+Device [ 0 ] NVIDIA A100 80GB PCIe @ 1410.00 MHz
+MAT: -------------- /scratch/general/vast/u1446071/spgemm_matrices/af_shell10.mtx --------------
+input matrix A: ( 1508065, 1508065 ) nnz = 52672325
+ loadfile time    = 10.35565 sec
+the tilesize = 16
+SpGEMM nnzCub = 1840916875
+CSR to Tile conversion uses 257.77 ms
+tile space overhead = 495.69 MB
+  col_major: tilem=94255, tilen=94255
+  col_major: transpose+step1(BT) 462.72 ms
+  col_major: step2(BT) 24.13 ms, BT->numtile=809691
+  col_major: step1(mat) 8.98 ms, numtile=809691
+  col_major: flag+alloc 89.26 ms
+  col_major: sort 1.93 ms
+  col_major: inner loop 1057.06 ms
+csr2tile_col_major uses 1644.17 ms
+bitmask alloc: lengthA=277675230 (1059 MB), blk_intersec_bitmask_len=2946
+bitmask_A fill uses 137.04 ms
+bitmask_B fill uses 136.07 ms
+bitmask H2D copy uses 405.24 ms (2118 MB total)
+  GPU memory: 77598 MB free / 81153 MB total
+entering GPU SpGEMM kernel loop (REPEAT_NUM=1, blkmA=94255, blknB=94255, bitmask_len=2946)
+  max_intprod=80, bin_sizes=[2,94253,0,0,0,0,0]
+  set_row_nnz done, numblkC=2257717
+  set_min_bin done, max_nz=25
+  calling calculate_value_col_bin (blkmB=94255)
+    calc_val_col_bin: case 0, GS=3, BS=256, bin_size=166, bin_offset=0, PWARP=4
+    calc_val_col_bin: case 0 done
+  calculate_value_col_bin done
+step1 ----Calculate the number and tile-column index of tiles of matrixC---
+step1 ---------------------- Runtime is  2.61 ms-------------------------
+
+step2 --------Calculate the number of nonzeros of each tile of matrixC-----
+step2 ---------------------- Runtime is  5.43 ms-------------------------
+
+step3 ---------Calculate the val&col of nonzeros of matrixC-------------
+step3 ---------------------- Runtime is  64.02 ms------------------------
+
+-----------------------Malloc uses 0.93 ms-------------------------------
+Non-empty tiles of C = 2257717
+nnzC = 102714306
+CUDA  TileSpGEMM runtime is 73.03 ms, gflops = 50.42
+-------------------------------check----------------------------------------
+tile to CSR conversion complete!
+
+--------------- SpGEMM (using cuSPARSE) ---------------
+ - cuda SpGEMM start! Benchmark runs 1 times.
+ - cuda SpGEMM completed!
+
+nnzC = 142742975, nnzCub = 1840916875, Compression rate = 12.90
+CUDA  cuSPARSE SpGEMM runtime is 82.4110 ms, GFlops = 44.6765
+
+Validating results...
+[NOT PASSED] nnzC = 142742975, nnzC_golden = 102714306
+[NOT PASSED] row_pointer, #err = 1508065
+timeout: the monitored command dumped core
+[ERROR] af_shell10 A^2 failed (exit=139)
+
+=== Benchmark complete: Sun Mar 29 13:50:17 MDT 2026 ===
