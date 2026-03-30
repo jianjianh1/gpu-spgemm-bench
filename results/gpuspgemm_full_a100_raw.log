@@ -1,0 +1,2925 @@
+=== Building GPU_SPGEMM ===
+Auto detection of gpu-archs: 80
+-- CPM: adding package argparse@ (origin/master -> /uufs/chpc.utah.edu/common/home/u1446071/repos/gpu_spgemm_bench/GPU_SPGEMM/cache/argparse/93c1d386d3d660d727d9d66873a2301d3c3ef472)
+-- Configuring done (11.0s)
+-- Generating done (0.2s)
+-- Build files have been written to: /uufs/chpc.utah.edu/common/home/u1446071/repos/gpu_spgemm_bench/GPU_SPGEMM/build
+[ 33%] Building CUDA object CMakeFiles/spgemm_raw_v2.dir/src/spgemm_raw_v2.cu.o
+[ 66%] Linking CUDA device code CMakeFiles/spgemm_raw_v2.dir/cmake_device_link.o
+[100%] Linking CUDA executable spgemm_raw_v2
+[100%] Built target spgemm_raw_v2
+=== GPU_SPGEMM Full Benchmark ===
+Date: Sun Mar 29 20:34:43 MDT 2026
+NVIDIA A100 80GB PCIe, 81920 MiB
+==========================================
+
+=== C=A^2: 3Dspectralwave2 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/3Dspectralwave2.mtx
+A: 292008 x 292008, nnz = 7307376
+SpGEMM flops = 211562848
+
+Raw Tile SpGEMM v2: tiles_C = 3622516, nnzC = 81767340
+  Step1 (tile structure) = 1.19 ms
+  Step2 (symbolic+scan)  = 5.80 ms
+  Step3 (numeric v2)     = 13.41 ms
+GPU time = 20.40 ms, GFlops = 20.75
+Done.
+
+=== C=A^2: 3Dspectralwave ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/3Dspectralwave.mtx
+A: 680943 x 680943, nnz = 17165766
+SpGEMM flops = 502849623
+
+Raw Tile SpGEMM v2: tiles_C = 8606683, nnzC = 195425175
+  Step1 (tile structure) = 2.95 ms
+  Step2 (symbolic+scan)  = 13.36 ms
+  Step3 (numeric v2)     = 32.10 ms
+GPU time = 48.41 ms, GFlops = 20.78
+Done.
+
+=== C=A^2: 3dtube ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/3dtube.mtx
+A: 45330 x 45330, nnz = 3213618
+SpGEMM flops = 299381624
+
+Raw Tile SpGEMM v2: tiles_C = 308362, nnzC = 23716476
+  Step1 (tile structure) = 0.87 ms
+  Step2 (symbolic+scan)  = 1.11 ms
+  Step3 (numeric v2)     = 4.12 ms
+GPU time = 6.09 ms, GFlops = 98.29
+Done.
+
+=== C=A^2: af_0_k101 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/af_0_k101.mtx
+A: 503625 x 503625, nnz = 17550675
+SpGEMM flops = 612413375
+
+Raw Tile SpGEMM v2: tiles_C = 734993, nnzC = 47472025
+  Step1 (tile structure) = 1.58 ms
+  Step2 (symbolic+scan)  = 1.24 ms
+  Step3 (numeric v2)     = 6.42 ms
+GPU time = 9.23 ms, GFlops = 132.63
+Done.
+
+=== C=A^2: af_1_k101 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/af_1_k101.mtx
+A: 503625 x 503625, nnz = 17550675
+SpGEMM flops = 612413375
+
+Raw Tile SpGEMM v2: tiles_C = 734993, nnzC = 47472025
+  Step1 (tile structure) = 1.46 ms
+  Step2 (symbolic+scan)  = 1.22 ms
+  Step3 (numeric v2)     = 6.41 ms
+GPU time = 9.09 ms, GFlops = 134.75
+Done.
+
+=== C=A^2: af_2_k101 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/af_2_k101.mtx
+A: 503625 x 503625, nnz = 17550675
+SpGEMM flops = 612413375
+
+Raw Tile SpGEMM v2: tiles_C = 734993, nnzC = 47472025
+  Step1 (tile structure) = 1.55 ms
+  Step2 (symbolic+scan)  = 1.24 ms
+  Step3 (numeric v2)     = 6.42 ms
+GPU time = 9.21 ms, GFlops = 133.04
+Done.
+
+=== C=A^2: af_3_k101 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/af_3_k101.mtx
+A: 503625 x 503625, nnz = 17550675
+SpGEMM flops = 612413375
+
+Raw Tile SpGEMM v2: tiles_C = 734993, nnzC = 47472025
+  Step1 (tile structure) = 1.47 ms
+  Step2 (symbolic+scan)  = 1.23 ms
+  Step3 (numeric v2)     = 6.43 ms
+GPU time = 9.12 ms, GFlops = 134.32
+Done.
+
+=== C=A^2: af_4_k101 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/af_4_k101.mtx
+A: 503625 x 503625, nnz = 17550675
+SpGEMM flops = 612413375
+
+Raw Tile SpGEMM v2: tiles_C = 734993, nnzC = 47472025
+  Step1 (tile structure) = 1.48 ms
+  Step2 (symbolic+scan)  = 1.21 ms
+  Step3 (numeric v2)     = 6.41 ms
+GPU time = 9.11 ms, GFlops = 134.47
+Done.
+
+=== C=A^2: af_5_k101 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/af_5_k101.mtx
+A: 503625 x 503625, nnz = 17550675
+SpGEMM flops = 612413375
+
+Raw Tile SpGEMM v2: tiles_C = 734993, nnzC = 47472025
+  Step1 (tile structure) = 1.47 ms
+  Step2 (symbolic+scan)  = 1.22 ms
+  Step3 (numeric v2)     = 6.42 ms
+GPU time = 9.11 ms, GFlops = 134.43
+Done.
+
+=== C=A^2: af_shell10 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/af_shell10.mtx
+A: 1508065 x 1508065, nnz = 52672325
+SpGEMM flops = 1840916875
+
+Raw Tile SpGEMM v2: tiles_C = 2257717, nnzC = 142742975
+  Step1 (tile structure) = 16.39 ms
+  Step2 (symbolic+scan)  = 3.29 ms
+  Step3 (numeric v2)     = 19.40 ms
+GPU time = 39.08 ms, GFlops = 94.21
+Done.
+
+=== C=A^2: af_shell1 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/af_shell1.mtx
+A: 504855 x 504855, nnz = 17588875
+SpGEMM flops = 613607875
+
+Raw Tile SpGEMM v2: tiles_C = 718304, nnzC = 47560375
+  Step1 (tile structure) = 1.61 ms
+  Step2 (symbolic+scan)  = 1.17 ms
+  Step3 (numeric v2)     = 6.46 ms
+GPU time = 9.24 ms, GFlops = 132.76
+Done.
+
+=== C=A^2: af_shell2 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/af_shell2.mtx
+A: 504855 x 504855, nnz = 17588875
+SpGEMM flops = 613607875
+
+Raw Tile SpGEMM v2: tiles_C = 718304, nnzC = 47560375
+  Step1 (tile structure) = 1.53 ms
+  Step2 (symbolic+scan)  = 1.17 ms
+  Step3 (numeric v2)     = 6.46 ms
+GPU time = 9.16 ms, GFlops = 134.00
+Done.
+
+=== C=A^2: af_shell3 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/af_shell3.mtx
+A: 504855 x 504855, nnz = 17588875
+SpGEMM flops = 613607875
+
+Raw Tile SpGEMM v2: tiles_C = 718304, nnzC = 47560375
+  Step1 (tile structure) = 1.53 ms
+  Step2 (symbolic+scan)  = 1.17 ms
+  Step3 (numeric v2)     = 6.47 ms
+GPU time = 9.17 ms, GFlops = 133.86
+Done.
+
+=== C=A^2: af_shell4 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/af_shell4.mtx
+A: 504855 x 504855, nnz = 17588875
+SpGEMM flops = 613607875
+
+Raw Tile SpGEMM v2: tiles_C = 718304, nnzC = 47560375
+  Step1 (tile structure) = 1.54 ms
+  Step2 (symbolic+scan)  = 1.16 ms
+  Step3 (numeric v2)     = 6.47 ms
+GPU time = 9.16 ms, GFlops = 133.96
+Done.
+
+=== C=A^2: af_shell5 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/af_shell5.mtx
+A: 504855 x 504855, nnz = 17588875
+SpGEMM flops = 613607875
+
+Raw Tile SpGEMM v2: tiles_C = 718304, nnzC = 47560375
+  Step1 (tile structure) = 1.53 ms
+  Step2 (symbolic+scan)  = 1.17 ms
+  Step3 (numeric v2)     = 6.46 ms
+GPU time = 9.15 ms, GFlops = 134.05
+Done.
+
+=== C=A^2: af_shell6 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/af_shell6.mtx
+A: 504855 x 504855, nnz = 17588875
+SpGEMM flops = 613607875
+
+Raw Tile SpGEMM v2: tiles_C = 718304, nnzC = 47560375
+  Step1 (tile structure) = 1.52 ms
+  Step2 (symbolic+scan)  = 1.17 ms
+  Step3 (numeric v2)     = 6.45 ms
+GPU time = 9.14 ms, GFlops = 134.32
+Done.
+
+=== C=A^2: af_shell7 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/af_shell7.mtx
+A: 504855 x 504855, nnz = 17588875
+SpGEMM flops = 613607875
+
+Raw Tile SpGEMM v2: tiles_C = 718304, nnzC = 47560375
+  Step1 (tile structure) = 1.55 ms
+  Step2 (symbolic+scan)  = 1.16 ms
+  Step3 (numeric v2)     = 6.45 ms
+GPU time = 9.16 ms, GFlops = 133.93
+Done.
+
+=== C=A^2: af_shell8 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/af_shell8.mtx
+A: 504855 x 504855, nnz = 17588875
+SpGEMM flops = 613607875
+
+Raw Tile SpGEMM v2: tiles_C = 718304, nnzC = 47560375
+  Step1 (tile structure) = 1.53 ms
+  Step2 (symbolic+scan)  = 1.17 ms
+  Step3 (numeric v2)     = 6.45 ms
+GPU time = 9.15 ms, GFlops = 134.11
+Done.
+
+=== C=A^2: af_shell9 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/af_shell9.mtx
+A: 504855 x 504855, nnz = 17588875
+SpGEMM flops = 613607875
+
+Raw Tile SpGEMM v2: tiles_C = 718304, nnzC = 47560375
+  Step1 (tile structure) = 1.54 ms
+  Step2 (symbolic+scan)  = 1.15 ms
+  Step3 (numeric v2)     = 6.46 ms
+GPU time = 9.15 ms, GFlops = 134.12
+Done.
+
+=== C=A^2: appu ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/appu.mtx
+A: 14000 x 14000, nnz = 1853104
+SpGEMM flops = 263931154
+
+Raw Tile SpGEMM v2: tiles_C = 765625, nnzC = 133137482
+  Step1 (tile structure) = 9.35 ms
+  Step2 (symbolic+scan)  = 121.28 ms
+  Step3 (numeric v2)     = 125.72 ms
+GPU time = 256.35 ms, GFlops = 2.06
+Done.
+
+=== C=A^2: arabic-2005 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/arabic-2005.mtx
+[ERROR] arabic-2005 A^2 failed (exit=124)
+
+=== C=A^2: as-Skitter ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/as-Skitter.mtx
+A: 1696415 x 1696415, nnz = 22190596
+SpGEMM flops = 32065521958
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.77 ms
+  Step2 (symbolic+scan)  = 0.09 ms
+  Step3 (numeric v2)     = 0.03 ms
+GPU time = 0.89 ms, GFlops = 71821.07
+Done.
+
+=== C=A^2: audikw_1 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/audikw_1.mtx
+A: 943695 x 943695, nnz = 77651847
+SpGEMM flops = 8089734897
+
+Raw Tile SpGEMM v2: tiles_C = 32147827, nnzC = 662878935
+  Step1 (tile structure) = 7.37 ms
+  Step2 (symbolic+scan)  = 60.64 ms
+  Step3 (numeric v2)     = 137.91 ms
+GPU time = 205.92 ms, GFlops = 78.57
+Done.
+
+=== C=A^2: BenElechi1 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/BenElechi1.mtx
+A: 245874 x 245874, nnz = 13150496
+SpGEMM flops = 705555870
+
+Raw Tile SpGEMM v2: tiles_C = 377678, nnzC = 36261344
+  Step1 (tile structure) = 0.94 ms
+  Step2 (symbolic+scan)  = 0.78 ms
+  Step3 (numeric v2)     = 4.61 ms
+GPU time = 6.33 ms, GFlops = 222.94
+Done.
+
+=== C=A^2: bmw3_2 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/bmw3_2.mtx
+A: 227362 x 227362, nnz = 11288630
+SpGEMM flops = 603855148
+
+Raw Tile SpGEMM v2: tiles_C = 1722455, nnzC = 36053036
+  Step1 (tile structure) = 1.02 ms
+  Step2 (symbolic+scan)  = 2.56 ms
+  Step3 (numeric v2)     = 7.13 ms
+GPU time = 10.71 ms, GFlops = 112.81
+Done.
+
+=== C=A^2: bmw7st_1 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/bmw7st_1.mtx
+A: 141347 x 141347, nnz = 7339667
+SpGEMM flops = 404009259
+
+Raw Tile SpGEMM v2: tiles_C = 1022881, nnzC = 23574259
+  Step1 (tile structure) = 0.93 ms
+  Step2 (symbolic+scan)  = 1.57 ms
+  Step3 (numeric v2)     = 4.65 ms
+GPU time = 7.16 ms, GFlops = 112.91
+Done.
+
+=== C=A^2: bmwcra_1 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/bmwcra_1.mtx
+A: 148770 x 148770, nnz = 10644002
+SpGEMM flops = 812503802
+
+Raw Tile SpGEMM v2: tiles_C = 1760375, nnzC = 49683708
+  Step1 (tile structure) = 0.96 ms
+  Step2 (symbolic+scan)  = 3.86 ms
+  Step3 (numeric v2)     = 11.08 ms
+GPU time = 15.91 ms, GFlops = 102.13
+Done.
+
+=== C=A^2: bone010 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/bone010.mtx
+A: 986703 x 986703, nnz = 71666325
+SpGEMM flops = 5451922539
+
+Raw Tile SpGEMM v2: tiles_C = 5950997, nnzC = 315860373
+  Step1 (tile structure) = 5.70 ms
+  Step2 (symbolic+scan)  = 11.37 ms
+  Step3 (numeric v2)     = 72.24 ms
+GPU time = 89.31 ms, GFlops = 122.09
+Done.
+
+=== C=A^2: boneS01 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/boneS01.mtx
+A: 127224 x 127224, nnz = 6715152
+SpGEMM flops = 394029846
+
+Raw Tile SpGEMM v2: tiles_C = 727300, nnzC = 25515702
+  Step1 (tile structure) = 0.84 ms
+  Step2 (symbolic+scan)  = 1.47 ms
+  Step3 (numeric v2)     = 6.06 ms
+GPU time = 8.37 ms, GFlops = 94.16
+Done.
+
+=== C=A^2: boneS10 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/boneS10.mtx
+A: 914898 x 914898, nnz = 55468422
+SpGEMM flops = 3742712082
+
+Raw Tile SpGEMM v2: tiles_C = 5106772, nnzC = 223561566
+  Step1 (tile structure) = 4.95 ms
+  Step2 (symbolic+scan)  = 9.47 ms
+  Step3 (numeric v2)     = 51.62 ms
+GPU time = 66.04 ms, GFlops = 113.34
+Done.
+
+=== C=A^2: Bump_2911 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/Bump_2911.mtx
+A: 2911419 x 2911419, nnz = 127729899
+SpGEMM flops = 5745156927
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.75 ms
+  Step2 (symbolic+scan)  = 0.10 ms
+  Step3 (numeric v2)     = 0.03 ms
+GPU time = 0.88 ms, GFlops = 12995.74
+Done.
+
+=== C=A^2: bundle_adj ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/bundle_adj.mtx
+A: 513351 x 513351, nnz = 20208051
+SpGEMM flops = 33076865781
+CUDA error: an illegal memory access was encountered
+
+Raw Tile SpGEMM v2: tiles_C = 26038327, nnzC = -1457702149
+  Step1 (tile structure) = 3.16 ms
+  Step2 (symbolic+scan)  = 32.02 ms
+  Step3 (numeric v2)     = 0.00 ms
+GPU time = 35.18 ms, GFlops = 1880.19
+Done.
+
+=== C=A^2: cage14 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/cage14.mtx
+A: 1505785 x 1505785, nnz = 27130349
+SpGEMM flops = 532205737
+
+Raw Tile SpGEMM v2: tiles_C = 39054920, nnzC = 236999813
+  Step1 (tile structure) = 20.82 ms
+  Step2 (symbolic+scan)  = 60.21 ms
+  Step3 (numeric v2)     = 79.90 ms
+GPU time = 160.92 ms, GFlops = 6.61
+Done.
+
+=== C=A^2: cage15 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/cage15.mtx
+A: 5154859 x 5154859, nnz = 99199551
+SpGEMM flops = 2078631615
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.64 ms
+  Step2 (symbolic+scan)  = 0.09 ms
+  Step3 (numeric v2)     = 0.04 ms
+GPU time = 0.76 ms, GFlops = 5436.66
+Done.
+
+=== C=A^2: cant ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/cant.mtx
+A: 62451 x 62451, nnz = 4007383
+SpGEMM flops = 269486473
+
+Raw Tile SpGEMM v2: tiles_C = 194910, nnzC = 17440029
+  Step1 (tile structure) = 0.66 ms
+  Step2 (symbolic+scan)  = 0.62 ms
+  Step3 (numeric v2)     = 3.56 ms
+GPU time = 4.83 ms, GFlops = 111.48
+Done.
+
+=== C=A^2: case39 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/case39.mtx
+A: 40216 x 40216, nnz = 1042160
+SpGEMM flops = 4048569774
+
+Raw Tile SpGEMM v2: tiles_C = 1627466, nnzC = 404705284
+  Step1 (tile structure) = 1.58 ms
+  Step2 (symbolic+scan)  = 3.50 ms
+  Step3 (numeric v2)     = 28.61 ms
+GPU time = 33.70 ms, GFlops = 240.29
+Done.
+
+=== C=A^2: channel-500x100x100-b050 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/channel-500x100x100-b050.mtx
+A: 4802000 x 4802000, nnz = 85362744
+SpGEMM flops = 1522677096
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.63 ms
+  Step2 (symbolic+scan)  = 0.09 ms
+  Step3 (numeric v2)     = 0.04 ms
+GPU time = 0.76 ms, GFlops = 4014.99
+Done.
+
+=== C=A^2: Chebyshev4 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/Chebyshev4.mtx
+A: 68121 x 68121, nnz = 5377761
+SpGEMM flops = 277056025
+
+Raw Tile SpGEMM v2: tiles_C = 479407, nnzC = 18870336
+  Step1 (tile structure) = 4.56 ms
+  Step2 (symbolic+scan)  = 4.04 ms
+  Step3 (numeric v2)     = 5.38 ms
+GPU time = 13.98 ms, GFlops = 39.63
+Done.
+
+=== C=A^2: circuit5M ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/circuit5M.mtx
+A: 5558326 x 5558326, nnz = 59524291
+SpGEMM flops = 10230223504925
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.67 ms
+  Step2 (symbolic+scan)  = 0.09 ms
+  Step3 (numeric v2)     = 0.04 ms
+GPU time = 0.80 ms, GFlops = 25583747.15
+Done.
+
+=== C=A^2: com-LiveJournal ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/com-LiveJournal.mtx
+A: 3997962 x 3997962, nnz = 69362378
+SpGEMM flops = 8580898768
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.79 ms
+  Step2 (symbolic+scan)  = 0.09 ms
+  Step3 (numeric v2)     = 0.04 ms
+GPU time = 0.92 ms, GFlops = 18697.05
+Done.
+
+=== C=A^2: com-Orkut ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/com-Orkut.mtx
+A: 3072441 x 3072441, nnz = 234370166
+SpGEMM flops = 91485303308
+timeout: the monitored command dumped core
+[ERROR] com-Orkut A^2 failed (exit=139)
+
+=== C=A^2: CO ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/CO.mtx
+A: 221119 x 221119, nnz = 7666057
+SpGEMM flops = 276737749
+
+Raw Tile SpGEMM v2: tiles_C = 6512660, nnzC = 100124359
+  Step1 (tile structure) = 1.30 ms
+  Step2 (symbolic+scan)  = 10.95 ms
+  Step3 (numeric v2)     = 20.41 ms
+GPU time = 32.65 ms, GFlops = 16.95
+Done.
+
+=== C=A^2: conf5_4-8x8-05 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/conf5_4-8x8-05.mtx
+A: 49152 x 49152, nnz = 1916928
+SpGEMM flops = 74760192
+
+Raw Tile SpGEMM v2: tiles_C = 263168, nnzC = 10911744
+  Step1 (tile structure) = 0.73 ms
+  Step2 (symbolic+scan)  = 0.53 ms
+  Step3 (numeric v2)     = 1.30 ms
+GPU time = 2.57 ms, GFlops = 58.10
+Done.
+
+=== C=A^2: consph ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/consph.mtx
+A: 83334 x 83334, nnz = 6010480
+SpGEMM flops = 463845030
+
+Raw Tile SpGEMM v2: tiles_C = 648883, nnzC = 26539736
+  Step1 (tile structure) = 0.85 ms
+  Step2 (symbolic+scan)  = 1.65 ms
+  Step3 (numeric v2)     = 6.48 ms
+GPU time = 8.97 ms, GFlops = 103.42
+Done.
+
+=== C=A^2: cop20k_A ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/cop20k_A.mtx
+A: 121192 x 121192, nnz = 2624331
+SpGEMM flops = 79883385
+
+Raw Tile SpGEMM v2: tiles_C = 15900566, nnzC = 18705069
+  Step1 (tile structure) = 2.01 ms
+  Step2 (symbolic+scan)  = 26.04 ms
+  Step3 (numeric v2)     = 17.20 ms
+GPU time = 45.25 ms, GFlops = 3.53
+Done.
+
+=== C=A^2: coPapersCiteseer ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/coPapersCiteseer.mtx
+A: 434102 x 434102, nnz = 32073440
+SpGEMM flops = 6822448658
+
+Raw Tile SpGEMM v2: tiles_C = 47764374, nnzC = 264584716
+  Step1 (tile structure) = 4.25 ms
+  Step2 (symbolic+scan)  = 122.96 ms
+  Step3 (numeric v2)     = 127.22 ms
+GPU time = 254.43 ms, GFlops = 53.63
+Done.
+
+=== C=A^2: coPapersDBLP ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/coPapersDBLP.mtx
+A: 540486 x 540486, nnz = 30491458
+SpGEMM flops = 4091407036
+CUDA error: an illegal memory access was encountered
+
+Raw Tile SpGEMM v2: tiles_C = 120363429, nnzC = 480122442
+  Step1 (tile structure) = 8.63 ms
+  Step2 (symbolic+scan)  = 322.58 ms
+  Step3 (numeric v2)     = 0.00 ms
+GPU time = 331.21 ms, GFlops = 24.71
+Done.
+
+=== C=A^2: CoupCons3D ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/CoupCons3D.mtx
+A: 416800 x 416800, nnz = 22322336
+SpGEMM flops = 1227203968
+
+Raw Tile SpGEMM v2: tiles_C = 1947832, nnzC = 89148864
+  Step1 (tile structure) = 1.38 ms
+  Step2 (symbolic+scan)  = 2.94 ms
+  Step3 (numeric v2)     = 12.67 ms
+GPU time = 16.99 ms, GFlops = 144.47
+Done.
+
+=== C=A^2: crankseg_1 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/crankseg_1.mtx
+A: 52804 x 52804, nnz = 10614210
+SpGEMM flops = 2548688036
+
+Raw Tile SpGEMM v2: tiles_C = 1954905, nnzC = 75096904
+  Step1 (tile structure) = 1.39 ms
+  Step2 (symbolic+scan)  = 8.72 ms
+  Step3 (numeric v2)     = 26.77 ms
+GPU time = 36.88 ms, GFlops = 138.21
+Done.
+
+=== C=A^2: crankseg_2 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/crankseg_2.mtx
+A: 63838 x 63838, nnz = 14148858
+SpGEMM flops = 3722717858
+
+Raw Tile SpGEMM v2: tiles_C = 2858666, nnzC = 104590168
+  Step1 (tile structure) = 1.68 ms
+  Step2 (symbolic+scan)  = 13.34 ms
+  Step3 (numeric v2)     = 39.46 ms
+GPU time = 54.49 ms, GFlops = 136.65
+Done.
+
+=== C=A^2: Cube_Coup_dt0 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/Cube_Coup_dt0.mtx
+A: 2164760 x 2164760, nnz = 127206144
+SpGEMM flops = 7518203008
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.67 ms
+  Step2 (symbolic+scan)  = 0.09 ms
+  Step3 (numeric v2)     = 0.04 ms
+GPU time = 0.80 ms, GFlops = 18772.23
+Done.
+
+=== C=A^2: Cube_Coup_dt6 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/Cube_Coup_dt6.mtx
+A: 2164760 x 2164760, nnz = 127206144
+SpGEMM flops = 7518203008
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.63 ms
+  Step2 (symbolic+scan)  = 0.10 ms
+  Step3 (numeric v2)     = 0.03 ms
+GPU time = 0.75 ms, GFlops = 19956.16
+Done.
+
+=== C=A^2: CurlCurl_4 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/CurlCurl_4.mtx
+A: 2380515 x 2380515, nnz = 26515867
+SpGEMM flops = 297096317
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.68 ms
+  Step2 (symbolic+scan)  = 0.09 ms
+  Step3 (numeric v2)     = 0.04 ms
+GPU time = 0.80 ms, GFlops = 739.49
+Done.
+
+=== C=A^2: delaunay_n23 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/delaunay_n23.mtx
+A: 8388608 x 8388608, nnz = 50331568
+SpGEMM flops = 316961668
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.82 ms
+  Step2 (symbolic+scan)  = 0.10 ms
+  Step3 (numeric v2)     = 0.04 ms
+GPU time = 0.95 ms, GFlops = 665.26
+Done.
+
+=== C=A^2: delaunay_n24 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/delaunay_n24.mtx
+A: 16777216 x 16777216, nnz = 100663202
+SpGEMM flops = 633914372
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.81 ms
+  Step2 (symbolic+scan)  = 0.10 ms
+  Step3 (numeric v2)     = 0.03 ms
+GPU time = 0.94 ms, GFlops = 1346.92
+Done.
+
+=== C=A^2: dgreen ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/dgreen.mtx
+A: 1200611 x 1200611, nnz = 38259877
+SpGEMM flops = 1376588233
+CUDA error: an illegal memory access was encountered
+
+Raw Tile SpGEMM v2: tiles_C = 554319233, nnzC = 4332976
+  Step1 (tile structure) = 96.31 ms
+  Step2 (symbolic+scan)  = 0.00 ms
+  Step3 (numeric v2)     = 0.00 ms
+GPU time = 96.31 ms, GFlops = 28.59
+Done.
+
+=== C=A^2: dielFilterV2clx ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/dielFilterV2clx.mtx
+A: 607232 x 607232, nnz = 25309272
+SpGEMM flops = 1241976752
+
+Raw Tile SpGEMM v2: tiles_C = 21869926, nnzC = 177614928
+  Step1 (tile structure) = 3.73 ms
+  Step2 (symbolic+scan)  = 50.71 ms
+  Step3 (numeric v2)     = 73.82 ms
+GPU time = 128.25 ms, GFlops = 19.37
+Done.
+
+=== C=A^2: dielFilterV2real ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/dielFilterV2real.mtx
+A: 1157456 x 1157456, nnz = 48538952
+SpGEMM flops = 2337362192
+
+Raw Tile SpGEMM v2: tiles_C = 50450281, nnzC = 325027200
+  Step1 (tile structure) = 13.62 ms
+  Step2 (symbolic+scan)  = 115.82 ms
+  Step3 (numeric v2)     = 156.36 ms
+GPU time = 285.80 ms, GFlops = 16.36
+Done.
+
+=== C=A^2: dielFilterV3clx ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/dielFilterV3clx.mtx
+A: 420408 x 420408, nnz = 32886208
+SpGEMM flops = 3126458918
+
+Raw Tile SpGEMM v2: tiles_C = 33365790, nnzC = 247299354
+  Step1 (tile structure) = 3.83 ms
+  Step2 (symbolic+scan)  = 96.14 ms
+  Step3 (numeric v2)     = 130.43 ms
+GPU time = 230.41 ms, GFlops = 27.14
+Done.
+
+=== C=A^2: dielFilterV3real ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/dielFilterV3real.mtx
+A: 1102824 x 1102824, nnz = 89306020
+SpGEMM flops = 8705461058
+CUDA error: an illegal memory access was encountered
+
+Raw Tile SpGEMM v2: tiles_C = 85074287, nnzC = 688649400
+  Step1 (tile structure) = 17.50 ms
+  Step2 (symbolic+scan)  = 269.27 ms
+  Step3 (numeric v2)     = 0.00 ms
+GPU time = 286.77 ms, GFlops = 60.71
+Done.
+
+=== C=A^2: Emilia_923 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/Emilia_923.mtx
+A: 923136 x 923136, nnz = 41005206
+SpGEMM flops = 1834209036
+
+Raw Tile SpGEMM v2: tiles_C = 11559360, nnzC = 179867448
+  Step1 (tile structure) = 5.60 ms
+  Step2 (symbolic+scan)  = 18.24 ms
+  Step3 (numeric v2)     = 47.31 ms
+GPU time = 71.15 ms, GFlops = 51.56
+Done.
+
+=== C=A^2: eu-2005 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/eu-2005.mtx
+A: 862664 x 862664, nnz = 19235140
+SpGEMM flops = 849268919
+
+Raw Tile SpGEMM v2: tiles_C = 36977544, nnzC = 284177131
+  Step1 (tile structure) = 7.10 ms
+  Step2 (symbolic+scan)  = 76.59 ms
+  Step3 (numeric v2)     = 78.88 ms
+GPU time = 162.56 ms, GFlops = 10.45
+Done.
+
+=== C=A^2: europe_osm ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/europe_osm.mtx
+A: 50912018 x 50912018, nnz = 108109320
+SpGEMM flops = 241277568
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.83 ms
+  Step2 (symbolic+scan)  = 0.10 ms
+  Step3 (numeric v2)     = 0.03 ms
+GPU time = 0.96 ms, GFlops = 504.71
+Done.
+
+=== C=A^2: exdata_1 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/exdata_1.mtx
+A: 6001 x 6001, nnz = 2269501
+SpGEMM flops = 3390807001
+
+Raw Tile SpGEMM v2: tiles_C = 47638, nnzC = 11275501
+  Step1 (tile structure) = 0.74 ms
+  Step2 (symbolic+scan)  = 1.44 ms
+  Step3 (numeric v2)     = 7.31 ms
+GPU time = 9.49 ms, GFlops = 714.59
+Done.
+
+=== C=A^2: F1 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/F1.mtx
+A: 343791 x 343791, nnz = 26837113
+SpGEMM flops = 2667510665
+
+Raw Tile SpGEMM v2: tiles_C = 56864731, nnzC = 224484403
+  Step1 (tile structure) = 4.52 ms
+  Step2 (symbolic+scan)  = 102.32 ms
+  Step3 (numeric v2)     = 105.57 ms
+GPU time = 212.42 ms, GFlops = 25.12
+Done.
+
+=== C=A^2: F2 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/F2.mtx
+A: 71505 x 71505, nnz = 5294285
+SpGEMM flops = 492807103
+
+Raw Tile SpGEMM v2: tiles_C = 7019574, nnzC = 39648121
+  Step1 (tile structure) = 1.43 ms
+  Step2 (symbolic+scan)  = 12.35 ms
+  Step3 (numeric v2)     = 17.09 ms
+GPU time = 30.87 ms, GFlops = 31.93
+Done.
+
+=== C=A^2: Fault_639 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/Fault_639.mtx
+A: 638802 x 638802, nnz = 28614564
+SpGEMM flops = 1298780298
+
+Raw Tile SpGEMM v2: tiles_C = 7842920, nnzC = 126633024
+  Step1 (tile structure) = 2.60 ms
+  Step2 (symbolic+scan)  = 11.94 ms
+  Step3 (numeric v2)     = 30.06 ms
+GPU time = 44.60 ms, GFlops = 58.24
+Done.
+
+=== C=A^2: fcondp2 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/fcondp2.mtx
+A: 201822 x 201822, nnz = 11294316
+SpGEMM flops = 650331072
+
+Raw Tile SpGEMM v2: tiles_C = 801140, nnzC = 34783596
+  Step1 (tile structure) = 0.91 ms
+  Step2 (symbolic+scan)  = 1.30 ms
+  Step3 (numeric v2)     = 5.28 ms
+GPU time = 7.48 ms, GFlops = 173.86
+Done.
+
+=== C=A^2: fem_hifreq_circuit ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/fem_hifreq_circuit.mtx
+A: 491100 x 491100, nnz = 20239237
+SpGEMM flops = 963431629
+
+Raw Tile SpGEMM v2: tiles_C = 25428314, nnzC = 134838250
+  Step1 (tile structure) = 2.85 ms
+  Step2 (symbolic+scan)  = 41.29 ms
+  Step3 (numeric v2)     = 46.64 ms
+GPU time = 90.78 ms, GFlops = 21.23
+Done.
+
+=== C=A^2: Flan_1565 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/Flan_1565.mtx
+A: 1564794 x 1564794, nnz = 117406044
+SpGEMM flops = 9013434840
+
+Raw Tile SpGEMM v2: tiles_C = 8873698, nnzC = 509685948
+  Step1 (tile structure) = 18.84 ms
+  Step2 (symbolic+scan)  = 19.09 ms
+  Step3 (numeric v2)     = 110.01 ms
+GPU time = 147.93 ms, GFlops = 121.86
+Done.
+
+=== C=A^2: fullb ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/fullb.mtx
+A: 199187 x 199187, nnz = 11708077
+SpGEMM flops = 720134257
+
+Raw Tile SpGEMM v2: tiles_C = 1593902, nnzC = 39383685
+  Step1 (tile structure) = 0.97 ms
+  Step2 (symbolic+scan)  = 2.44 ms
+  Step3 (numeric v2)     = 7.90 ms
+GPU time = 11.30 ms, GFlops = 127.42
+Done.
+
+=== C=A^2: FullChip ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/FullChip.mtx
+A: 2987012 x 2987012, nnz = 26621990
+SpGEMM flops = 9751394287841
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.74 ms
+  Step2 (symbolic+scan)  = 0.09 ms
+  Step3 (numeric v2)     = 0.03 ms
+GPU time = 0.87 ms, GFlops = 22503494.41
+Done.
+
+=== C=A^2: Ga10As10H30 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/Ga10As10H30.mtx
+A: 113081 x 113081, nnz = 6115633
+SpGEMM flops = 1098110645
+
+Raw Tile SpGEMM v2: tiles_C = 3757618, nnzC = 75156365
+  Step1 (tile structure) = 1.33 ms
+  Step2 (symbolic+scan)  = 11.65 ms
+  Step3 (numeric v2)     = 26.66 ms
+GPU time = 39.64 ms, GFlops = 55.41
+Done.
+
+=== C=A^2: Ga19As19H42 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/Ga19As19H42.mtx
+A: 133123 x 133123, nnz = 8884839
+SpGEMM flops = 2010298639
+
+Raw Tile SpGEMM v2: tiles_C = 4985575, nnzC = 108051533
+  Step1 (tile structure) = 1.52 ms
+  Step2 (symbolic+scan)  = 19.49 ms
+  Step3 (numeric v2)     = 45.14 ms
+GPU time = 66.16 ms, GFlops = 60.77
+Done.
+
+=== C=A^2: Ga3As3H12 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/Ga3As3H12.mtx
+A: 61349 x 61349, nnz = 5970947
+SpGEMM flops = 3677546507
+
+Raw Tile SpGEMM v2: tiles_C = 2243861, nnzC = 62181563
+  Step1 (tile structure) = 1.51 ms
+  Step2 (symbolic+scan)  = 14.18 ms
+  Step3 (numeric v2)     = 45.05 ms
+GPU time = 60.73 ms, GFlops = 121.10
+Done.
+
+=== C=A^2: Ga41As41H72 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/Ga41As41H72.mtx
+A: 268096 x 268096, nnz = 18488476
+SpGEMM flops = 4252622992
+
+Raw Tile SpGEMM v2: tiles_C = 10864808, nnzC = 231455088
+  Step1 (tile structure) = 2.28 ms
+  Step2 (symbolic+scan)  = 42.49 ms
+  Step3 (numeric v2)     = 100.83 ms
+GPU time = 145.60 ms, GFlops = 58.42
+Done.
+
+=== C=A^2: Ge87H76 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/Ge87H76.mtx
+A: 112985 x 112985, nnz = 7892195
+SpGEMM flops = 1469531179
+
+Raw Tile SpGEMM v2: tiles_C = 4156062, nnzC = 99053985
+  Step1 (tile structure) = 1.40 ms
+  Step2 (symbolic+scan)  = 18.93 ms
+  Step3 (numeric v2)     = 40.20 ms
+GPU time = 60.53 ms, GFlops = 48.55
+Done.
+
+=== C=A^2: Ge99H100 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/Ge99H100.mtx
+A: 112985 x 112985, nnz = 8451395
+SpGEMM flops = 1642015363
+
+Raw Tile SpGEMM v2: tiles_C = 4272442, nnzC = 105811785
+  Step1 (tile structure) = 1.50 ms
+  Step2 (symbolic+scan)  = 20.91 ms
+  Step3 (numeric v2)     = 43.95 ms
+GPU time = 66.36 ms, GFlops = 49.49
+Done.
+
+=== C=A^2: gearbox ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/gearbox.mtx
+A: 153746 x 153746, nnz = 9080404
+SpGEMM flops = 572805818
+
+Raw Tile SpGEMM v2: tiles_C = 748080, nnzC = 32671334
+  Step1 (tile structure) = 1.06 ms
+  Step2 (symbolic+scan)  = 1.91 ms
+  Step3 (numeric v2)     = 6.87 ms
+GPU time = 9.85 ms, GFlops = 116.29
+Done.
+
+=== C=A^2: Geo_1438 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/Geo_1438.mtx
+A: 1437960 x 1437960, nnz = 63156690
+SpGEMM flops = 2801728386
+
+Raw Tile SpGEMM v2: tiles_C = 15971459, nnzC = 274478976
+  Step1 (tile structure) = 16.95 ms
+  Step2 (symbolic+scan)  = 23.79 ms
+  Step3 (numeric v2)     = 66.98 ms
+GPU time = 107.72 ms, GFlops = 52.02
+Done.
+
+=== C=A^2: gsm_106857 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/gsm_106857.mtx
+A: 589446 x 589446, nnz = 21758924
+SpGEMM flops = 947250936
+CUDA error: an illegal memory access was encountered
+
+Raw Tile SpGEMM v2: tiles_C = 227906515, nnzC = -1519837952
+  Step1 (tile structure) = 21.01 ms
+  Step2 (symbolic+scan)  = 0.00 ms
+  Step3 (numeric v2)     = 0.00 ms
+GPU time = 21.01 ms, GFlops = 90.16
+Done.
+
+=== C=A^2: gupta2 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/gupta2.mtx
+A: 62064 x 62064, nnz = 4248286
+SpGEMM flops = 8157571640
+CUDA error: an illegal memory access was encountered
+
+Raw Tile SpGEMM v2: tiles_C = 2830481, nnzC = 0
+  Step1 (tile structure) = 1.82 ms
+  Step2 (symbolic+scan)  = 0.00 ms
+  Step3 (numeric v2)     = 0.00 ms
+GPU time = 1.82 ms, GFlops = 8970.83
+Done.
+
+=== C=A^2: gupta3 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/gupta3.mtx
+A: 16783 x 16783, nnz = 9323427
+SpGEMM flops = 30715971817
+CUDA error: an illegal memory access was encountered
+
+Raw Tile SpGEMM v2: tiles_C = 1100401, nnzC = 0
+  Step1 (tile structure) = 2.02 ms
+  Step2 (symbolic+scan)  = 0.00 ms
+  Step3 (numeric v2)     = 0.00 ms
+GPU time = 2.02 ms, GFlops = 30469.78
+Done.
+
+=== C=A^2: halfb ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/halfb.mtx
+A: 224617 x 224617, nnz = 12387821
+SpGEMM flops = 715500645
+
+Raw Tile SpGEMM v2: tiles_C = 1150583, nnzC = 38939969
+  Step1 (tile structure) = 0.95 ms
+  Step2 (symbolic+scan)  = 1.78 ms
+  Step3 (numeric v2)     = 6.49 ms
+GPU time = 9.22 ms, GFlops = 155.24
+Done.
+
+=== C=A^2: heart1 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/heart1.mtx
+A: 3557 x 3557, nnz = 1387773
+SpGEMM flops = 596065851
+  spec realloc: 360408 -> 399630
+
+Raw Tile SpGEMM v2: tiles_C = 45051, nnzC = 5273361
+  Step1 (tile structure) = 0.67 ms
+  Step2 (symbolic+scan)  = 2.49 ms
+  Step3 (numeric v2)     = 3.25 ms
+GPU time = 6.42 ms, GFlops = 185.81
+Done.
+
+=== C=A^2: higgs-twitter ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/higgs-twitter.mtx
+A: 456626 x 456626, nnz = 14855842
+SpGEMM flops = 1601068599
+CUDA error: an illegal memory access was encountered
+
+Raw Tile SpGEMM v2: tiles_C = 447014510, nnzC = 4332976
+  Step1 (tile structure) = 44.04 ms
+  Step2 (symbolic+scan)  = 0.00 ms
+  Step3 (numeric v2)     = 0.00 ms
+GPU time = 44.04 ms, GFlops = 72.71
+Done.
+
+=== C=A^2: hollywood-2009 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/hollywood-2009.mtx
+A: 1139905 x 1139905, nnz = 113891327
+SpGEMM flops = 95630208429
+CUDA error: an illegal memory access was encountered
+
+Raw Tile SpGEMM v2: tiles_C = 1979085127, nnzC = 4332976
+  Step1 (tile structure) = 434.05 ms
+  Step2 (symbolic+scan)  = 0.00 ms
+  Step3 (numeric v2)     = 0.00 ms
+GPU time = 434.05 ms, GFlops = 440.64
+Done.
+
+=== C=A^2: hood ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/hood.mtx
+A: 220542 x 220542, nnz = 10768436
+SpGEMM flops = 562028138
+
+Raw Tile SpGEMM v2: tiles_C = 2096500, nnzC = 34242180
+  Step1 (tile structure) = 1.07 ms
+  Step2 (symbolic+scan)  = 2.83 ms
+  Step3 (numeric v2)     = 8.14 ms
+GPU time = 12.04 ms, GFlops = 93.33
+Done.
+
+=== C=A^2: Hook_1498 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/Hook_1498.mtx
+A: 1498023 x 1498023, nnz = 60917445
+SpGEMM flops = 2768898411
+
+Raw Tile SpGEMM v2: tiles_C = 17292529, nnzC = 312415749
+  Step1 (tile structure) = 18.15 ms
+  Step2 (symbolic+scan)  = 25.89 ms
+  Step3 (numeric v2)     = 65.72 ms
+GPU time = 109.75 ms, GFlops = 50.46
+Done.
+
+=== C=A^2: human_gene1 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/human_gene1.mtx
+A: 22283 x 22283, nnz = 24669643
+SpGEMM flops = 71557562711
+
+Raw Tile SpGEMM v2: tiles_C = 1934883, nnzC = 224112639
+  Step1 (tile structure) = 30.58 ms
+  Step2 (symbolic+scan)  = 744.33 ms
+  Step3 (numeric v2)     = 2159.47 ms
+GPU time = 2934.38 ms, GFlops = 48.77
+Done.
+
+=== C=A^2: human_gene2 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/human_gene2.mtx
+A: 14340 x 14340, nnz = 18068388
+SpGEMM flops = 49883051738
+
+Raw Tile SpGEMM v2: tiles_C = 801027, nnzC = 163153048
+  Step1 (tile structure) = 13.57 ms
+  Step2 (symbolic+scan)  = 208.11 ms
+  Step3 (numeric v2)     = 1063.47 ms
+GPU time = 1285.16 ms, GFlops = 77.63
+Done.
+
+=== C=A^2: in-2004 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/in-2004.mtx
+A: 1382908 x 1382908, nnz = 16917053
+SpGEMM flops = 1708503481
+
+Raw Tile SpGEMM v2: tiles_C = 7580068, nnzC = 213255458
+  Step1 (tile structure) = 14.65 ms
+  Step2 (symbolic+scan)  = 10.04 ms
+  Step3 (numeric v2)     = 17.89 ms
+GPU time = 42.58 ms, GFlops = 80.24
+Done.
+
+=== C=A^2: indochina-2004 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/indochina-2004.mtx
+A: 7414866 x 7414866, nnz = 194109311
+SpGEMM flops = 346753756151
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.67 ms
+  Step2 (symbolic+scan)  = 0.09 ms
+  Step3 (numeric v2)     = 0.04 ms
+GPU time = 0.79 ms, GFlops = 879014.82
+Done.
+
+=== C=A^2: inline_1 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/inline_1.mtx
+A: 503712 x 503712, nnz = 36816342
+SpGEMM flops = 3330443366
+
+Raw Tile SpGEMM v2: tiles_C = 22967726, nnzC = 253084638
+  Step1 (tile structure) = 4.00 ms
+  Step2 (symbolic+scan)  = 38.17 ms
+  Step3 (numeric v2)     = 71.64 ms
+GPU time = 113.81 ms, GFlops = 58.53
+Done.
+
+=== C=A^2: kim2 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/kim2.mtx
+A: 456976 x 456976, nnz = 11330020
+SpGEMM flops = 281999272
+
+Raw Tile SpGEMM v2: tiles_C = 938113, nnzC = 36640356
+  Step1 (tile structure) = 1.34 ms
+  Step2 (symbolic+scan)  = 1.34 ms
+  Step3 (numeric v2)     = 7.39 ms
+GPU time = 10.08 ms, GFlops = 55.97
+Done.
+
+=== C=A^2: kmer_A2a ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/kmer_A2a.mtx
+A: 170728175 x 170728175, nnz = 360585172
+SpGEMM flops = 816003894
+timeout: the monitored command dumped core
+[ERROR] kmer_A2a A^2 failed (exit=139)
+
+=== C=A^2: kmer_P1a ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/kmer_P1a.mtx
+A: 139353211 x 139353211, nnz = 297829984
+SpGEMM flops = 693044878
+timeout: the monitored command dumped core
+[ERROR] kmer_P1a A^2 failed (exit=139)
+
+=== C=A^2: kmer_U1a ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/kmer_U1a.mtx
+A: 67716231 x 67716231, nnz = 138778562
+SpGEMM flops = 293457606
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.90 ms
+  Step2 (symbolic+scan)  = 0.10 ms
+  Step3 (numeric v2)     = 0.04 ms
+GPU time = 1.03 ms, GFlops = 568.38
+Done.
+
+=== C=A^2: kmer_V1r ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/kmer_V1r.mtx
+A: 214005017 x 214005017, nnz = 465410904
+SpGEMM flops = 1080000338
+timeout: the monitored command dumped core
+[ERROR] kmer_V1r A^2 failed (exit=139)
+
+=== C=A^2: kmer_V2a ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/kmer_V2a.mtx
+A: 55042369 x 55042369, nnz = 117217600
+SpGEMM flops = 274563472
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.85 ms
+  Step2 (symbolic+scan)  = 0.10 ms
+  Step3 (numeric v2)     = 0.03 ms
+GPU time = 0.97 ms, GFlops = 564.78
+Done.
+
+=== C=A^2: kron_g500-logn16 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/kron_g500-logn16.mtx
+A: 65536 x 65536, nnz = 4912469
+SpGEMM flops = 6768428563
+
+Raw Tile SpGEMM v2: tiles_C = 16777214, nnzC = 972785311
+  Step1 (tile structure) = 41.81 ms
+  Step2 (symbolic+scan)  = 2220.22 ms
+  Step3 (numeric v2)     = 2893.18 ms
+GPU time = 5155.21 ms, GFlops = 2.63
+Done.
+
+=== C=A^2: kron_g500-logn17 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/kron_g500-logn17.mtx
+A: 131072 x 131072, nnz = 10228360
+SpGEMM flops = 19536683396
+CUDA error: an illegal memory access was encountered
+
+Raw Tile SpGEMM v2: tiles_C = 67108692, nnzC = -1288395493
+  Step1 (tile structure) = 123.67 ms
+  Step2 (symbolic+scan)  = 9301.06 ms
+  Step3 (numeric v2)     = 0.00 ms
+GPU time = 9424.74 ms, GFlops = 4.15
+Done.
+
+=== C=A^2: kron_g500-logn18 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/kron_g500-logn18.mtx
+A: 262144 x 262144, nnz = 21165908
+SpGEMM flops = 55677340576
+CUDA error: an illegal memory access was encountered
+
+Raw Tile SpGEMM v2: tiles_C = 268420216, nnzC = 4332976
+  Step1 (tile structure) = 358.49 ms
+  Step2 (symbolic+scan)  = 0.00 ms
+  Step3 (numeric v2)     = 0.00 ms
+GPU time = 358.49 ms, GFlops = 310.62
+Done.
+
+=== C=A^2: kron_g500-logn19 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/kron_g500-logn19.mtx
+A: 524288 x 524288, nnz = 43562265
+SpGEMM flops = 157019711615
+CUDA error: an illegal memory access was encountered
+
+Raw Tile SpGEMM v2: tiles_C = 1073340252, nnzC = -2076909024
+  Step1 (tile structure) = 1084.15 ms
+  Step2 (symbolic+scan)  = 0.00 ms
+  Step3 (numeric v2)     = 0.00 ms
+GPU time = 1084.15 ms, GFlops = 289.66
+Done.
+
+=== C=A^2: kron_g500-logn20 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/kron_g500-logn20.mtx
+A: 1048576 x 1048576, nnz = 89239674
+SpGEMM flops = 438410747284
+  spec realloc: -65631520 -> 0
+CUDA error: an illegal memory access was encountered
+
+Raw Tile SpGEMM v2: tiles_C = -8203940, nnzC = 0
+  Step1 (tile structure) = 0.00 ms
+  Step2 (symbolic+scan)  = 0.00 ms
+  Step3 (numeric v2)     = -nan ms
+GPU time = -nan ms, GFlops = -nan
+Done.
+
+=== C=A^2: kron_g500-logn21 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/kron_g500-logn21.mtx
+A: 2097152 x 2097152, nnz = 182082942
+SpGEMM flops = 1213270258808
+timeout: the monitored command dumped core
+[ERROR] kron_g500-logn21 A^2 failed (exit=139)
+
+=== C=A^2: laminar_duct3D ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/laminar_duct3D.mtx
+A: 67173 x 67173, nnz = 3833077
+SpGEMM flops = 286051210
+
+Raw Tile SpGEMM v2: tiles_C = 483175, nnzC = 18934077
+  Step1 (tile structure) = 0.81 ms
+  Step2 (symbolic+scan)  = 1.03 ms
+  Step3 (numeric v2)     = 4.55 ms
+GPU time = 6.38 ms, GFlops = 89.60
+Done.
+
+=== C=A^2: ldoor ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/ldoor.mtx
+A: 952203 x 952203, nnz = 46522475
+SpGEMM flops = 2408881377
+
+Raw Tile SpGEMM v2: tiles_C = 8526273, nnzC = 145422935
+  Step1 (tile structure) = 5.42 ms
+  Step2 (symbolic+scan)  = 10.68 ms
+  Step3 (numeric v2)     = 32.84 ms
+GPU time = 48.94 ms, GFlops = 98.45
+Done.
+
+=== C=A^2: ljournal-2008 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/ljournal-2008.mtx
+A: 5363260 x 5363260, nnz = 79023142
+SpGEMM flops = 7828656041
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.64 ms
+  Step2 (symbolic+scan)  = 0.09 ms
+  Step3 (numeric v2)     = 0.03 ms
+GPU time = 0.77 ms, GFlops = 20450.18
+Done.
+
+=== C=A^2: Long_Coup_dt0 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/Long_Coup_dt0.mtx
+A: 1470152 x 1470152, nnz = 87088992
+SpGEMM flops = 5224243712
+
+Raw Tile SpGEMM v2: tiles_C = 14367969, nnzC = 388670368
+  Step1 (tile structure) = 17.18 ms
+  Step2 (symbolic+scan)  = 20.01 ms
+  Step3 (numeric v2)     = 64.16 ms
+GPU time = 101.35 ms, GFlops = 103.10
+Done.
+
+=== C=A^2: Long_Coup_dt6 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/Long_Coup_dt6.mtx
+A: 1470152 x 1470152, nnz = 87088992
+SpGEMM flops = 5224243712
+
+Raw Tile SpGEMM v2: tiles_C = 14367969, nnzC = 388670368
+  Step1 (tile structure) = 17.16 ms
+  Step2 (symbolic+scan)  = 20.08 ms
+  Step3 (numeric v2)     = 64.14 ms
+GPU time = 101.38 ms, GFlops = 103.06
+Done.
+
+=== C=A^2: mac_econ_fwd500 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/mac_econ_fwd500.mtx
+A: 206500 x 206500, nnz = 1273389
+SpGEMM flops = 7556897
+
+Raw Tile SpGEMM v2: tiles_C = 1813390, nnzC = 6704899
+  Step1 (tile structure) = 0.96 ms
+  Step2 (symbolic+scan)  = 2.45 ms
+  Step3 (numeric v2)     = 2.71 ms
+GPU time = 6.12 ms, GFlops = 2.47
+Done.
+
+=== C=A^2: mawi_201512020030 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/mawi_201512020030.mtx
+A: 68863315 x 68863315, nnz = 143414960
+SpGEMM flops = 3974321527657862
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.86 ms
+  Step2 (symbolic+scan)  = 0.10 ms
+  Step3 (numeric v2)     = 0.04 ms
+GPU time = 0.99 ms, GFlops = 8018952933.57
+Done.
+
+=== C=A^2: mawi_201512020130 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/mawi_201512020130.mtx
+A: 128568730 x 128568730, nnz = 270234840
+SpGEMM flops = 14207313062962228
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.90 ms
+  Step2 (symbolic+scan)  = 0.10 ms
+  Step3 (numeric v2)     = 0.04 ms
+GPU time = 1.03 ms, GFlops = 27603737894.31
+Done.
+
+=== C=A^2: mawi_201512020330 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/mawi_201512020330.mtx
+A: 226196185 x 226196185, nnz = 480047894
+SpGEMM flops = 44436208638696954
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.93 ms
+  Step2 (symbolic+scan)  = 0.11 ms
+  Step3 (numeric v2)     = 0.04 ms
+GPU time = 1.07 ms, GFlops = 82851436872.55
+Done.
+[ERROR] mawi_201512020330 A^2 failed (exit=124)
+
+=== C=A^2: mc2depi ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/mc2depi.mtx
+A: 525825 x 525825, nnz = 2100225
+SpGEMM flops = 8391680
+
+Raw Tile SpGEMM v2: tiles_C = 457835, nnzC = 5245952
+  Step1 (tile structure) = 1.51 ms
+  Step2 (symbolic+scan)  = 0.73 ms
+  Step3 (numeric v2)     = 0.93 ms
+GPU time = 3.17 ms, GFlops = 5.30
+Done.
+
+=== C=A^2: mip1 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/mip1.mtx
+A: 66463 x 66463, nnz = 10352819
+SpGEMM flops = 9789022557
+CUDA error: an illegal memory access was encountered
+
+Raw Tile SpGEMM v2: tiles_C = 17255716, nnzC = 113559355
+  Step1 (tile structure) = 5.42 ms
+  Step2 (symbolic+scan)  = 26.63 ms
+  Step3 (numeric v2)     = 0.00 ms
+GPU time = 32.05 ms, GFlops = 610.86
+Done.
+
+=== C=A^2: ML_Geer ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/ML_Geer.mtx
+A: 1504002 x 1504002, nnz = 110879972
+SpGEMM flops = 8183887848
+
+Raw Tile SpGEMM v2: tiles_C = 5291941, nnzC = 385264884
+  Step1 (tile structure) = 16.97 ms
+  Step2 (symbolic+scan)  = 11.20 ms
+  Step3 (numeric v2)     = 76.51 ms
+GPU time = 104.68 ms, GFlops = 156.37
+Done.
+
+=== C=A^2: ML_Laplace ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/ML_Laplace.mtx
+A: 377002 x 377002, nnz = 27689972
+SpGEMM flops = 2038451848
+
+Raw Tile SpGEMM v2: tiles_C = 1320887, nnzC = 95882884
+  Step1 (tile structure) = 1.27 ms
+  Step2 (symbolic+scan)  = 2.91 ms
+  Step3 (numeric v2)     = 19.14 ms
+GPU time = 23.31 ms, GFlops = 174.87
+Done.
+
+=== C=A^2: mouse_gene ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/mouse_gene.mtx
+A: 45101 x 45101, nnz = 28967291
+SpGEMM flops = 51703801103
+
+Raw Tile SpGEMM v2: tiles_C = 7946761, nnzC = 482594045
+  Step1 (tile structure) = 134.12 ms
+  Step2 (symbolic+scan)  = 3960.28 ms
+  Step3 (numeric v2)     = 5676.33 ms
+GPU time = 9770.74 ms, GFlops = 10.58
+Done.
+
+=== C=A^2: msdoor ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/msdoor.mtx
+A: 415863 x 415863, nnz = 20240935
+SpGEMM flops = 1042194293
+
+Raw Tile SpGEMM v2: tiles_C = 4204626, nnzC = 62822459
+  Step1 (tile structure) = 1.49 ms
+  Step2 (symbolic+scan)  = 5.70 ms
+  Step3 (numeric v2)     = 16.08 ms
+GPU time = 23.28 ms, GFlops = 89.55
+Done.
+
+=== C=A^2: m_t1 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/m_t1.mtx
+A: 97578 x 97578, nnz = 9753570
+SpGEMM flops = 1054513134
+
+Raw Tile SpGEMM v2: tiles_C = 702261, nnzC = 36533142
+  Step1 (tile structure) = 0.82 ms
+  Step2 (symbolic+scan)  = 1.69 ms
+  Step3 (numeric v2)     = 7.30 ms
+GPU time = 9.80 ms, GFlops = 215.10
+Done.
+
+=== C=A^2: mycielskian13 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/mycielskian13.mtx
+A: 6143 x 6143, nnz = 1227742
+SpGEMM flops = 620201162
+CUDA error: an illegal memory access was encountered
+
+Raw Tile SpGEMM v2: tiles_C = 147456, nnzC = 1451303456
+  Step1 (tile structure) = 1.04 ms
+  Step2 (symbolic+scan)  = 0.00 ms
+  Step3 (numeric v2)     = 0.00 ms
+GPU time = 1.04 ms, GFlops = 1194.53
+Done.
+
+=== C=A^2: mycielskian14 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/mycielskian14.mtx
+A: 12287 x 12287, nnz = 3695512
+SpGEMM flops = 3141203886
+CUDA error: an illegal memory access was encountered
+
+Raw Tile SpGEMM v2: tiles_C = 589824, nnzC = -1342178048
+  Step1 (tile structure) = 1.92 ms
+  Step2 (symbolic+scan)  = 0.00 ms
+  Step3 (numeric v2)     = 0.00 ms
+GPU time = 1.92 ms, GFlops = 3263.71
+Done.
+
+=== C=A^2: mycielskian15 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/mycielskian15.mtx
+A: 24575 x 24575, nnz = 11111110
+SpGEMM flops = 15864393110
+CUDA error: an illegal memory access was encountered
+
+Raw Tile SpGEMM v2: tiles_C = 2359296, nnzC = 0
+  Step1 (tile structure) = 4.74 ms
+  Step2 (symbolic+scan)  = 0.00 ms
+  Step3 (numeric v2)     = 0.00 ms
+GPU time = 4.74 ms, GFlops = 6694.29
+Done.
+
+=== C=A^2: mycielskian16 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/mycielskian16.mtx
+A: 49151 x 49151, nnz = 33382480
+SpGEMM flops = 79948142970
+  spec realloc: 75497472 -> 77609246
+CUDA error: an illegal memory access was encountered
+
+Raw Tile SpGEMM v2: tiles_C = 9437184, nnzC = -1912528975
+  Step1 (tile structure) = 15.69 ms
+  Step2 (symbolic+scan)  = 755.45 ms
+  Step3 (numeric v2)     = 0.00 ms
+GPU time = 771.14 ms, GFlops = 207.35
+Done.
+
+=== C=A^2: mycielskian17 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/mycielskian17.mtx
+A: 98303 x 98303, nnz = 100245742
+SpGEMM flops = 402223349762
+CUDA error: an illegal memory access was encountered
+
+Raw Tile SpGEMM v2: tiles_C = 37748736, nnzC = 973299475
+  Step1 (tile structure) = 54.30 ms
+  Step2 (symbolic+scan)  = 2100.79 ms
+  Step3 (numeric v2)     = 0.00 ms
+GPU time = 2155.09 ms, GFlops = 373.28
+Done.
+
+=== C=A^2: mycielskian18 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/mycielskian18.mtx
+A: 196607 x 196607, nnz = 300933832
+SpGEMM flops = 2020980818406
+CUDA error: an illegal memory access was encountered
+
+Raw Tile SpGEMM v2: tiles_C = 150994944, nnzC = 4332976
+  Step1 (tile structure) = 199.73 ms
+  Step2 (symbolic+scan)  = 0.00 ms
+  Step3 (numeric v2)     = 0.00 ms
+GPU time = 199.73 ms, GFlops = 20236.94
+Done.
+
+=== C=A^2: mycielskian19 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/mycielskian19.mtx
+[ERROR] mycielskian19 A^2 failed (exit=124)
+
+=== C=A^2: nd12k ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/nd12k.mtx
+A: 36000 x 36000, nnz = 14220946
+SpGEMM flops = 5866811560
+
+Raw Tile SpGEMM v2: tiles_C = 1011454, nnzC = 90906894
+  Step1 (tile structure) = 0.92 ms
+  Step2 (symbolic+scan)  = 5.03 ms
+  Step3 (numeric v2)     = 42.20 ms
+GPU time = 48.15 ms, GFlops = 243.71
+Done.
+
+=== C=A^2: nd24k ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/nd24k.mtx
+A: 72000 x 72000, nnz = 28715634
+SpGEMM flops = 11878868250
+
+Raw Tile SpGEMM v2: tiles_C = 2291370, nnzC = 189190604
+  Step1 (tile structure) = 1.06 ms
+  Step2 (symbolic+scan)  = 10.23 ms
+  Step3 (numeric v2)     = 87.52 ms
+GPU time = 98.81 ms, GFlops = 240.44
+Done.
+
+=== C=A^2: nd3k ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/nd3k.mtx
+A: 9000 x 9000, nnz = 3279690
+SpGEMM flops = 1275971514
+  spec realloc: 1260792 -> 1317013
+
+Raw Tile SpGEMM v2: tiles_C = 157599, nnzC = 18491738
+  Step1 (tile structure) = 0.77 ms
+  Step2 (symbolic+scan)  = 2.86 ms
+  Step3 (numeric v2)     = 8.93 ms
+GPU time = 12.56 ms, GFlops = 203.26
+Done.
+
+=== C=A^2: nd6k ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/nd6k.mtx
+A: 18000 x 18000, nnz = 6897316
+SpGEMM flops = 2786075040
+
+Raw Tile SpGEMM v2: tiles_C = 407359, nnzC = 42198384
+  Step1 (tile structure) = 0.83 ms
+  Step2 (symbolic+scan)  = 2.46 ms
+  Step3 (numeric v2)     = 19.53 ms
+GPU time = 22.82 ms, GFlops = 244.15
+Done.
+
+=== C=A^2: nemeth23 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/nemeth23.mtx
+A: 9506 x 9506, nnz = 1506810
+SpGEMM flops = 244444956
+
+Raw Tile SpGEMM v2: tiles_C = 17045, nnzC = 3441280
+  Step1 (tile structure) = 0.64 ms
+  Step2 (symbolic+scan)  = 0.27 ms
+  Step3 (numeric v2)     = 1.03 ms
+GPU time = 1.93 ms, GFlops = 253.07
+Done.
+
+=== C=A^2: nemeth24 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/nemeth24.mtx
+A: 9506 x 9506, nnz = 1506550
+SpGEMM flops = 244884334
+
+Raw Tile SpGEMM v2: tiles_C = 17045, nnzC = 3486190
+  Step1 (tile structure) = 0.63 ms
+  Step2 (symbolic+scan)  = 0.27 ms
+  Step3 (numeric v2)     = 1.07 ms
+GPU time = 1.97 ms, GFlops = 248.48
+Done.
+
+=== C=A^2: nemeth25 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/nemeth25.mtx
+A: 9506 x 9506, nnz = 1511758
+SpGEMM flops = 246446874
+
+Raw Tile SpGEMM v2: tiles_C = 17045, nnzC = 3486190
+  Step1 (tile structure) = 0.63 ms
+  Step2 (symbolic+scan)  = 0.27 ms
+  Step3 (numeric v2)     = 1.07 ms
+GPU time = 1.97 ms, GFlops = 250.64
+Done.
+
+=== C=A^2: nemeth26 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/nemeth26.mtx
+A: 9506 x 9506, nnz = 1511760
+SpGEMM flops = 246447354
+
+Raw Tile SpGEMM v2: tiles_C = 17045, nnzC = 3486190
+  Step1 (tile structure) = 0.63 ms
+  Step2 (symbolic+scan)  = 0.27 ms
+  Step3 (numeric v2)     = 1.06 ms
+GPU time = 1.96 ms, GFlops = 251.54
+Done.
+
+=== C=A^2: net150 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/net150.mtx
+A: 43520 x 43520, nnz = 3121200
+SpGEMM flops = 467208280
+
+Raw Tile SpGEMM v2: tiles_C = 2622348, nnzC = 238012852
+  Step1 (tile structure) = 1.21 ms
+  Step2 (symbolic+scan)  = 11.08 ms
+  Step3 (numeric v2)     = 17.99 ms
+GPU time = 30.29 ms, GFlops = 30.85
+Done.
+
+=== C=A^2: nlpkkt120 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/nlpkkt120.mtx
+A: 3542400 x 3542400, nnz = 96845792
+SpGEMM flops = 2681554304
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.75 ms
+  Step2 (symbolic+scan)  = 0.09 ms
+  Step3 (numeric v2)     = 0.03 ms
+GPU time = 0.88 ms, GFlops = 6103.54
+Done.
+
+=== C=A^2: nlpkkt160 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/nlpkkt160.mtx
+A: 8345600 x 8345600, nnz = 229518112
+SpGEMM flops = 6372858304
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.64 ms
+  Step2 (symbolic+scan)  = 0.09 ms
+  Step3 (numeric v2)     = 0.03 ms
+GPU time = 0.77 ms, GFlops = 16648.01
+Done.
+
+=== C=A^2: nlpkkt200 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/nlpkkt200.mtx
+A: 16240000 x 16240000, nnz = 448225632
+SpGEMM flops = 12466408704
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.82 ms
+  Step2 (symbolic+scan)  = 0.09 ms
+  Step3 (numeric v2)     = 0.04 ms
+GPU time = 0.95 ms, GFlops = 26137.22
+Done.
+
+=== C=A^2: nlpkkt240 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/nlpkkt240.mtx
+[ERROR] nlpkkt240 A^2 failed (exit=124)
+
+=== C=A^2: nlpkkt80 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/nlpkkt80.mtx
+A: 1062400 x 1062400, nnz = 28704672
+SpGEMM flops = 790384704
+
+Raw Tile SpGEMM v2: tiles_C = 5987080, nnzC = 154663144
+  Step1 (tile structure) = 7.56 ms
+  Step2 (symbolic+scan)  = 7.80 ms
+  Step3 (numeric v2)     = 27.68 ms
+GPU time = 43.04 ms, GFlops = 36.73
+Done.
+
+=== C=A^2: nv2 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/nv2.mtx
+A: 1453908 x 1453908, nnz = 52728362
+SpGEMM flops = 2034624478
+  spec realloc: -15962360064 -> 0
+CUDA error: an illegal memory access was encountered
+
+Raw Tile SpGEMM v2: tiles_C = -1995295008, nnzC = -597687776
+  Step1 (tile structure) = 0.00 ms
+  Step2 (symbolic+scan)  = 0.00 ms
+  Step3 (numeric v2)     = -803555840662778229875779043328.00 ms
+GPU time = -803555840662778229875779043328.00 ms, GFlops = -0.00
+Done.
+
+=== C=A^2: ohne2 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/ohne2.mtx
+A: 181343 x 181343, nnz = 11063545
+SpGEMM flops = 755597643
+
+Raw Tile SpGEMM v2: tiles_C = 10723786, nnzC = 72432047
+  Step1 (tile structure) = 4.93 ms
+  Step2 (symbolic+scan)  = 32.06 ms
+  Step3 (numeric v2)     = 40.22 ms
+GPU time = 77.21 ms, GFlops = 19.57
+Done.
+
+=== C=A^2: opt1 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/opt1.mtx
+A: 15449 x 15449, nnz = 1930655
+SpGEMM flops = 269171047
+
+Raw Tile SpGEMM v2: tiles_C = 97714, nnzC = 8224575
+  Step1 (tile structure) = 0.66 ms
+  Step2 (symbolic+scan)  = 0.62 ms
+  Step3 (numeric v2)     = 1.90 ms
+GPU time = 3.18 ms, GFlops = 169.15
+Done.
+
+=== C=A^2: packing-500x100x100-b050 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/packing-500x100x100-b050.mtx
+A: 2145852 x 2145852, nnz = 34976486
+SpGEMM flops = 587282846
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.66 ms
+  Step2 (symbolic+scan)  = 0.09 ms
+  Step3 (numeric v2)     = 0.03 ms
+GPU time = 0.79 ms, GFlops = 1489.54
+Done.
+
+=== C=A^2: pattern1 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/pattern1.mtx
+A: 19242 x 19242, nnz = 9323432
+SpGEMM flops = 7292315690
+CUDA error: an illegal memory access was encountered
+
+Raw Tile SpGEMM v2: tiles_C = 1447209, nnzC = -1962733024
+  Step1 (tile structure) = 5.98 ms
+  Step2 (symbolic+scan)  = 0.00 ms
+  Step3 (numeric v2)     = 0.00 ms
+GPU time = 5.98 ms, GFlops = 2439.40
+Done.
+
+=== C=A^2: pdb1HYS ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/pdb1HYS.mtx
+A: 36417 x 36417, nnz = 4344765
+SpGEMM flops = 555322659
+
+Raw Tile SpGEMM v2: tiles_C = 221571, nnzC = 19594581
+  Step1 (tile structure) = 0.73 ms
+  Step2 (symbolic+scan)  = 0.85 ms
+  Step3 (numeric v2)     = 3.80 ms
+GPU time = 5.38 ms, GFlops = 206.48
+Done.
+
+=== C=A^2: PFlow_742 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/PFlow_742.mtx
+A: 742793 x 742793, nnz = 37138461
+SpGEMM flops = 2153163125
+
+Raw Tile SpGEMM v2: tiles_C = 2963023, nnzC = 211748975
+  Step1 (tile structure) = 3.15 ms
+  Step2 (symbolic+scan)  = 6.70 ms
+  Step3 (numeric v2)     = 36.23 ms
+GPU time = 46.08 ms, GFlops = 93.44
+Done.
+
+=== C=A^2: pkustk04 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/pkustk04.mtx
+A: 55590 x 55590, nnz = 4218660
+SpGEMM flops = 1003691088
+
+Raw Tile SpGEMM v2: tiles_C = 2192159, nnzC = 164709684
+  Step1 (tile structure) = 1.31 ms
+  Step2 (symbolic+scan)  = 4.86 ms
+  Step3 (numeric v2)     = 12.35 ms
+GPU time = 18.52 ms, GFlops = 108.41
+Done.
+
+=== C=A^2: pkustk07 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/pkustk07.mtx
+A: 16860 x 16860, nnz = 2418804
+SpGEMM flops = 410021730
+  spec realloc: 4185472 -> 4316244
+
+Raw Tile SpGEMM v2: tiles_C = 523184, nnzC = 13944528
+  Step1 (tile structure) = 0.98 ms
+  Step2 (symbolic+scan)  = 8.68 ms
+  Step3 (numeric v2)     = 6.62 ms
+GPU time = 16.27 ms, GFlops = 50.39
+Done.
+
+=== C=A^2: pkustk08 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/pkustk08.mtx
+A: 22209 x 22209, nnz = 3226671
+SpGEMM flops = 552893121
+
+Raw Tile SpGEMM v2: tiles_C = 882109, nnzC = 18895419
+  Step1 (tile structure) = 1.13 ms
+  Step2 (symbolic+scan)  = 5.98 ms
+  Step3 (numeric v2)     = 9.52 ms
+GPU time = 16.63 ms, GFlops = 66.51
+Done.
+
+=== C=A^2: pkustk10 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/pkustk10.mtx
+A: 80676 x 80676, nnz = 4308984
+SpGEMM flops = 233628624
+
+Raw Tile SpGEMM v2: tiles_C = 586565, nnzC = 12233304
+  Step1 (tile structure) = 0.83 ms
+  Step2 (symbolic+scan)  = 1.15 ms
+  Step3 (numeric v2)     = 2.74 ms
+GPU time = 4.72 ms, GFlops = 98.92
+Done.
+
+=== C=A^2: pkustk11 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/pkustk11.mtx
+A: 87804 x 87804, nnz = 5217912
+SpGEMM flops = 365102640
+
+Raw Tile SpGEMM v2: tiles_C = 1083226, nnzC = 21435768
+  Step1 (tile structure) = 0.99 ms
+  Step2 (symbolic+scan)  = 2.10 ms
+  Step3 (numeric v2)     = 4.57 ms
+GPU time = 7.67 ms, GFlops = 95.23
+Done.
+
+=== C=A^2: pkustk12 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/pkustk12.mtx
+A: 94653 x 94653, nnz = 7512317
+SpGEMM flops = 2680479077
+
+Raw Tile SpGEMM v2: tiles_C = 6161002, nnzC = 474804911
+  Step1 (tile structure) = 2.16 ms
+  Step2 (symbolic+scan)  = 11.62 ms
+  Step3 (numeric v2)     = 30.02 ms
+GPU time = 43.79 ms, GFlops = 122.41
+Done.
+
+=== C=A^2: pkustk13 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/pkustk13.mtx
+A: 94893 x 94893, nnz = 6616827
+SpGEMM flops = 562997403
+
+Raw Tile SpGEMM v2: tiles_C = 2508089, nnzC = 39507999
+  Step1 (tile structure) = 1.14 ms
+  Step2 (symbolic+scan)  = 6.77 ms
+  Step3 (numeric v2)     = 11.33 ms
+GPU time = 19.24 ms, GFlops = 58.53
+Done.
+
+=== C=A^2: pkustk14 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/pkustk14.mtx
+A: 151926 x 151926, nnz = 14836504
+SpGEMM flops = 1777485814
+
+Raw Tile SpGEMM v2: tiles_C = 3637588, nnzC = 72584244
+  Step1 (tile structure) = 1.30 ms
+  Step2 (symbolic+scan)  = 10.36 ms
+  Step3 (numeric v2)     = 23.99 ms
+GPU time = 35.64 ms, GFlops = 99.74
+Done.
+
+=== C=A^2: PR02R ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/PR02R.mtx
+A: 161070 x 161070, nnz = 8185136
+SpGEMM flops = 471911391
+
+Raw Tile SpGEMM v2: tiles_C = 461359, nnzC = 30969453
+  Step1 (tile structure) = 0.85 ms
+  Step2 (symbolic+scan)  = 1.08 ms
+  Step3 (numeric v2)     = 4.92 ms
+GPU time = 6.85 ms, GFlops = 137.72
+Done.
+
+=== C=A^2: pwtk ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/pwtk.mtx
+A: 217918 x 217918, nnz = 11634424
+SpGEMM flops = 626054402
+
+Raw Tile SpGEMM v2: tiles_C = 457734, nnzC = 32772236
+  Step1 (tile structure) = 0.91 ms
+  Step2 (symbolic+scan)  = 0.88 ms
+  Step3 (numeric v2)     = 5.16 ms
+GPU time = 6.95 ms, GFlops = 180.06
+Done.
+
+=== C=A^2: Queen_4147 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/Queen_4147.mtx
+A: 4147110 x 4147110, nnz = 329499284
+SpGEMM flops = 26346406576
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.74 ms
+  Step2 (symbolic+scan)  = 0.09 ms
+  Step3 (numeric v2)     = 0.04 ms
+GPU time = 0.87 ms, GFlops = 60607.69
+Done.
+
+=== C=A^2: ramage02 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/ramage02.mtx
+A: 16830 x 16830, nnz = 2866352
+SpGEMM flops = 535195176
+
+Raw Tile SpGEMM v2: tiles_C = 205362, nnzC = 14592198
+  Step1 (tile structure) = 0.75 ms
+  Step2 (symbolic+scan)  = 0.98 ms
+  Step3 (numeric v2)     = 4.36 ms
+GPU time = 6.08 ms, GFlops = 175.91
+Done.
+
+=== C=A^2: rgg_n_2_21_s0 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/rgg_n_2_21_s0.mtx
+A: 2097152 x 2097152, nnz = 28975990
+SpGEMM flops = 429575072
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.63 ms
+  Step2 (symbolic+scan)  = 0.09 ms
+  Step3 (numeric v2)     = 0.04 ms
+GPU time = 0.76 ms, GFlops = 1130.79
+Done.
+
+=== C=A^2: rgg_n_2_22_s0 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/rgg_n_2_22_s0.mtx
+A: 4194304 x 4194304, nnz = 60718396
+SpGEMM flops = 939942910
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.67 ms
+  Step2 (symbolic+scan)  = 0.09 ms
+  Step3 (numeric v2)     = 0.04 ms
+GPU time = 0.80 ms, GFlops = 2343.20
+Done.
+
+=== C=A^2: rgg_n_2_23_s0 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/rgg_n_2_23_s0.mtx
+A: 8388608 x 8388608, nnz = 127002786
+SpGEMM flops = 2050055514
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.84 ms
+  Step2 (symbolic+scan)  = 0.10 ms
+  Step3 (numeric v2)     = 0.04 ms
+GPU time = 0.97 ms, GFlops = 4228.66
+Done.
+
+=== C=A^2: rgg_n_2_24_s0 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/rgg_n_2_24_s0.mtx
+A: 16777216 x 16777216, nnz = 265114400
+SpGEMM flops = 4455117406
+timeout: the monitored command dumped core
+[ERROR] rgg_n_2_24_s0 A^2 failed (exit=139)
+
+=== C=A^2: RM07R ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/RM07R.mtx
+A: 381689 x 381689, nnz = 37464962
+SpGEMM flops = 5272142064
+
+Raw Tile SpGEMM v2: tiles_C = 7366283, nnzC = 193345783
+  Step1 (tile structure) = 1.87 ms
+  Step2 (symbolic+scan)  = 19.42 ms
+  Step3 (numeric v2)     = 68.55 ms
+GPU time = 89.84 ms, GFlops = 117.36
+Done.
+
+=== C=A^2: rma10 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/rma10.mtx
+A: 46835 x 46835, nnz = 2374001
+SpGEMM flops = 156480259
+
+Raw Tile SpGEMM v2: tiles_C = 139474, nnzC = 7900917
+  Step1 (tile structure) = 0.73 ms
+  Step2 (symbolic+scan)  = 0.54 ms
+  Step3 (numeric v2)     = 1.64 ms
+GPU time = 2.91 ms, GFlops = 107.49
+Done.
+
+=== C=A^2: s3dkq4m2 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/s3dkq4m2.mtx
+A: 90449 x 90449, nnz = 4820891
+SpGEMM flops = 258143357
+
+Raw Tile SpGEMM v2: tiles_C = 140310, nnzC = 13282553
+  Step1 (tile structure) = 0.67 ms
+  Step2 (symbolic+scan)  = 0.43 ms
+  Step3 (numeric v2)     = 1.96 ms
+GPU time = 3.06 ms, GFlops = 168.53
+Done.
+
+=== C=A^2: scircuit ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/scircuit.mtx
+A: 170998 x 170998, nnz = 958936
+SpGEMM flops = 8676313
+
+Raw Tile SpGEMM v2: tiles_C = 1724826, nnzC = 5222525
+  Step1 (tile structure) = 1.09 ms
+  Step2 (symbolic+scan)  = 2.35 ms
+  Step3 (numeric v2)     = 2.18 ms
+GPU time = 5.62 ms, GFlops = 3.09
+Done.
+
+=== C=A^2: Serena ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/Serena.mtx
+A: 1391349 x 1391349, nnz = 64531701
+SpGEMM flops = 3111966351
+
+Raw Tile SpGEMM v2: tiles_C = 20885034, nnzC = 315805689
+  Step1 (tile structure) = 16.44 ms
+  Step2 (symbolic+scan)  = 33.47 ms
+  Step3 (numeric v2)     = 75.77 ms
+GPU time = 125.68 ms, GFlops = 49.52
+Done.
+
+=== C=A^2: ship_001 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/ship_001.mtx
+A: 34920 x 34920, nnz = 4644230
+SpGEMM flops = 724065786
+
+Raw Tile SpGEMM v2: tiles_C = 445419, nnzC = 25600538
+  Step1 (tile structure) = 0.82 ms
+  Step2 (symbolic+scan)  = 1.54 ms
+  Step3 (numeric v2)     = 5.63 ms
+GPU time = 7.99 ms, GFlops = 181.28
+Done.
+
+=== C=A^2: shipsec1 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/shipsec1.mtx
+A: 140874 x 140874, nnz = 7813404
+SpGEMM flops = 450639288
+
+Raw Tile SpGEMM v2: tiles_C = 907109, nnzC = 24086412
+  Step1 (tile structure) = 0.91 ms
+  Step2 (symbolic+scan)  = 1.60 ms
+  Step3 (numeric v2)     = 4.86 ms
+GPU time = 7.37 ms, GFlops = 122.24
+Done.
+
+=== C=A^2: Si34H36 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/Si34H36.mtx
+A: 97569 x 97569, nnz = 5156379
+SpGEMM flops = 736154859
+
+Raw Tile SpGEMM v2: tiles_C = 3139525, nnzC = 65211697
+  Step1 (tile structure) = 1.19 ms
+  Step2 (symbolic+scan)  = 10.10 ms
+  Step3 (numeric v2)     = 21.52 ms
+GPU time = 32.81 ms, GFlops = 44.88
+Done.
+
+=== C=A^2: Si41Ge41H72 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/Si41Ge41H72.mtx
+A: 185639 x 185639, nnz = 15011265
+SpGEMM flops = 4206695551
+
+Raw Tile SpGEMM v2: tiles_C = 7624081, nnzC = 173776869
+  Step1 (tile structure) = 1.87 ms
+  Step2 (symbolic+scan)  = 35.07 ms
+  Step3 (numeric v2)     = 86.87 ms
+GPU time = 123.82 ms, GFlops = 67.95
+Done.
+
+=== C=A^2: Si87H76 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/Si87H76.mtx
+A: 240369 x 240369, nnz = 10661631
+SpGEMM flops = 851575071
+
+Raw Tile SpGEMM v2: tiles_C = 8097954, nnzC = 141319585
+  Step1 (tile structure) = 1.75 ms
+  Step2 (symbolic+scan)  = 19.80 ms
+  Step3 (numeric v2)     = 38.21 ms
+GPU time = 59.77 ms, GFlops = 28.50
+Done.
+
+=== C=A^2: SiO2 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/SiO2.mtx
+A: 155331 x 155331, nnz = 11283503
+SpGEMM flops = 14261280271
+
+Raw Tile SpGEMM v2: tiles_C = 5316543, nnzC = 104839083
+  Step1 (tile structure) = 2.27 ms
+  Step2 (symbolic+scan)  = 25.89 ms
+  Step3 (numeric v2)     = 156.12 ms
+GPU time = 184.28 ms, GFlops = 154.78
+Done.
+
+=== C=A^2: sme3Dc ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/sme3Dc.mtx
+A: 42930 x 42930, nnz = 3148656
+SpGEMM flops = 289653169
+
+Raw Tile SpGEMM v2: tiles_C = 7203750, nnzC = 22744224
+  Step1 (tile structure) = 12.19 ms
+  Step2 (symbolic+scan)  = 532.32 ms
+  Step3 (numeric v2)     = 442.15 ms
+GPU time = 986.66 ms, GFlops = 0.59
+Done.
+
+=== C=A^2: smt ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/smt.mtx
+A: 25710 x 25710, nnz = 3753184
+SpGEMM flops = 605945948
+  spec realloc: 3741912 -> 3949773
+
+Raw Tile SpGEMM v2: tiles_C = 467739, nnzC = 19444560
+  Step1 (tile structure) = 0.83 ms
+  Step2 (symbolic+scan)  = 6.02 ms
+  Step3 (numeric v2)     = 6.86 ms
+GPU time = 13.72 ms, GFlops = 88.36
+Done.
+
+=== C=A^2: soc-LiveJournal1 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/soc-LiveJournal1.mtx
+A: 4847571 x 4847571, nnz = 68993773
+SpGEMM flops = 5915633945
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.66 ms
+  Step2 (symbolic+scan)  = 0.09 ms
+  Step3 (numeric v2)     = 0.04 ms
+GPU time = 0.78 ms, GFlops = 15102.61
+Done.
+
+=== C=A^2: soc-Pokec ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/soc-Pokec.mtx
+A: 1632803 x 1632803, nnz = 30622564
+SpGEMM flops = 1780294899
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.72 ms
+  Step2 (symbolic+scan)  = 0.09 ms
+  Step3 (numeric v2)     = 0.03 ms
+GPU time = 0.84 ms, GFlops = 4250.46
+Done.
+
+=== C=A^2: ss ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/ss.mtx
+A: 1652680 x 1652680, nnz = 34753577
+SpGEMM flops = 687203895
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.75 ms
+  Step2 (symbolic+scan)  = 0.09 ms
+  Step3 (numeric v2)     = 0.04 ms
+GPU time = 0.88 ms, GFlops = 1565.76
+Done.
+
+=== C=A^2: StocF-1465 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/StocF-1465.mtx
+A: 1465137 x 1465137, nnz = 21005389
+SpGEMM flops = 310855795
+
+Raw Tile SpGEMM v2: tiles_C = 18095662, nnzC = 93163361
+  Step1 (tile structure) = 17.60 ms
+  Step2 (symbolic+scan)  = 24.64 ms
+  Step3 (numeric v2)     = 34.74 ms
+GPU time = 76.98 ms, GFlops = 8.08
+Done.
+
+=== C=A^2: stokes ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/stokes.mtx
+A: 11449533 x 11449533, nnz = 349321980
+SpGEMM flops = 9424182529
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.81 ms
+  Step2 (symbolic+scan)  = 0.10 ms
+  Step3 (numeric v2)     = 0.04 ms
+GPU time = 0.95 ms, GFlops = 19888.96
+Done.
+
+=== C=A^2: sx-stackoverflow ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/sx-stackoverflow.mtx
+A: 2601977 x 2601977, nnz = 36233450
+SpGEMM flops = 19688258838
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.64 ms
+  Step2 (symbolic+scan)  = 0.09 ms
+  Step3 (numeric v2)     = 0.04 ms
+GPU time = 0.76 ms, GFlops = 51604.79
+Done.
+
+=== C=A^2: t3dh_a ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/t3dh_a.mtx
+A: 79171 x 79171, nnz = 4352105
+SpGEMM flops = 255940359
+CUDA error: an illegal memory access was encountered
+
+Raw Tile SpGEMM v2: tiles_C = 982287, nnzC = 4332976
+  Step1 (tile structure) = 0.89 ms
+  Step2 (symbolic+scan)  = 0.00 ms
+  Step3 (numeric v2)     = 0.00 ms
+GPU time = 0.89 ms, GFlops = 572.28
+Done.
+
+=== C=A^2: t3dh_e ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/t3dh_e.mtx
+A: 79171 x 79171, nnz = 4352105
+SpGEMM flops = 255940359
+CUDA error: an illegal memory access was encountered
+
+Raw Tile SpGEMM v2: tiles_C = 982287, nnzC = 743435520
+  Step1 (tile structure) = 0.92 ms
+  Step2 (symbolic+scan)  = 0.00 ms
+  Step3 (numeric v2)     = 0.00 ms
+GPU time = 0.92 ms, GFlops = 553.41
+Done.
+
+=== C=A^2: t3dh ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/t3dh.mtx
+A: 79171 x 79171, nnz = 4352105
+SpGEMM flops = 255940359
+CUDA error: an illegal memory access was encountered
+
+Raw Tile SpGEMM v2: tiles_C = 982287, nnzC = 0
+  Step1 (tile structure) = 0.89 ms
+  Step2 (symbolic+scan)  = 0.00 ms
+  Step3 (numeric v2)     = 0.00 ms
+GPU time = 0.89 ms, GFlops = 574.13
+Done.
+
+=== C=A^2: TEM152078 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/TEM152078.mtx
+A: 152078 x 152078, nnz = 6459326
+SpGEMM flops = 316248060
+
+Raw Tile SpGEMM v2: tiles_C = 2053493, nnzC = 44565636
+  Step1 (tile structure) = 0.93 ms
+  Step2 (symbolic+scan)  = 3.59 ms
+  Step3 (numeric v2)     = 6.87 ms
+GPU time = 11.40 ms, GFlops = 55.51
+Done.
+
+=== C=A^2: TEM181302 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/TEM181302.mtx
+A: 181302 x 181302, nnz = 7839010
+SpGEMM flops = 389462070
+
+Raw Tile SpGEMM v2: tiles_C = 2593124, nnzC = 54981434
+  Step1 (tile structure) = 1.07 ms
+  Step2 (symbolic+scan)  = 4.51 ms
+  Step3 (numeric v2)     = 8.52 ms
+GPU time = 14.11 ms, GFlops = 55.22
+Done.
+
+=== C=A^2: test1 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/test1.mtx
+A: 392908 x 392908, nnz = 12968200
+SpGEMM flops = 468508270
+
+Raw Tile SpGEMM v2: tiles_C = 18033307, nnzC = 75250370
+  Step1 (tile structure) = 13.86 ms
+  Step2 (symbolic+scan)  = 330.54 ms
+  Step3 (numeric v2)     = 380.82 ms
+GPU time = 725.21 ms, GFlops = 1.29
+Done.
+
+=== C=A^2: thread ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/thread.mtx
+A: 29736 x 29736, nnz = 4470048
+SpGEMM flops = 738161100
+
+Raw Tile SpGEMM v2: tiles_C = 458205, nnzC = 24678162
+  Step1 (tile structure) = 0.82 ms
+  Step2 (symbolic+scan)  = 1.73 ms
+  Step3 (numeric v2)     = 6.47 ms
+GPU time = 9.02 ms, GFlops = 163.64
+Done.
+
+=== C=A^2: torso1 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/torso1.mtx
+A: 116158 x 116158, nnz = 8516500
+SpGEMM flops = 7598748124
+
+Raw Tile SpGEMM v2: tiles_C = 413366, nnzC = 19600778
+  Step1 (tile structure) = 1.19 ms
+  Step2 (symbolic+scan)  = 3.98 ms
+  Step3 (numeric v2)     = 21.80 ms
+GPU time = 26.97 ms, GFlops = 563.42
+Done.
+
+=== C=A^2: Transport ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/Transport.mtx
+A: 1602111 x 1602111, nnz = 23500731
+SpGEMM flops = 346715709
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.69 ms
+  Step2 (symbolic+scan)  = 0.09 ms
+  Step3 (numeric v2)     = 0.04 ms
+GPU time = 0.81 ms, GFlops = 852.00
+Done.
+
+=== C=A^2: troll ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/troll.mtx
+A: 213453 x 213453, nnz = 11985111
+SpGEMM flops = 708402807
+
+Raw Tile SpGEMM v2: tiles_C = 1017101, nnzC = 41778513
+  Step1 (tile structure) = 0.95 ms
+  Step2 (symbolic+scan)  = 1.81 ms
+  Step3 (numeric v2)     = 7.24 ms
+GPU time = 9.99 ms, GFlops = 141.79
+Done.
+
+=== C=A^2: TSC_OPF_1047 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/TSC_OPF_1047.mtx
+A: 8140 x 8140, nnz = 2016902
+SpGEMM flops = 1352381644
+
+Raw Tile SpGEMM v2: tiles_C = 115265, nnzC = 8833332
+  Step1 (tile structure) = 0.71 ms
+  Step2 (symbolic+scan)  = 1.35 ms
+  Step3 (numeric v2)     = 3.83 ms
+GPU time = 5.89 ms, GFlops = 459.27
+Done.
+
+=== C=A^2: TSOPF_FS_b300_c1 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/TSOPF_FS_b300_c1.mtx
+A: 29214 x 29214, nnz = 4400122
+SpGEMM flops = 14023656792
+
+Raw Tile SpGEMM v2: tiles_C = 880456, nnzC = 212471856
+  Step1 (tile structure) = 1.44 ms
+  Step2 (symbolic+scan)  = 6.81 ms
+  Step3 (numeric v2)     = 29.60 ms
+GPU time = 37.85 ms, GFlops = 740.92
+Done.
+
+=== C=A^2: TSOPF_FS_b300_c2 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/TSOPF_FS_b300_c2.mtx
+A: 56814 x 56814, nnz = 8767466
+SpGEMM flops = 53947137470
+
+Raw Tile SpGEMM v2: tiles_C = 3246409, nnzC = 805683050
+  Step1 (tile structure) = 2.37 ms
+  Step2 (symbolic+scan)  = 15.27 ms
+  Step3 (numeric v2)     = 110.20 ms
+GPU time = 127.83 ms, GFlops = 844.03
+Done.
+
+=== C=A^2: TSOPF_FS_b300_c3 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/TSOPF_FS_b300_c3.mtx
+A: 84414 x 84414, nnz = 13135930
+SpGEMM flops = 119817914048
+
+Raw Tile SpGEMM v2: tiles_C = 7112690, nnzC = 1779798974
+  Step1 (tile structure) = 3.74 ms
+  Step2 (symbolic+scan)  = 25.30 ms
+  Step3 (numeric v2)     = 246.38 ms
+GPU time = 275.43 ms, GFlops = 870.05
+Done.
+
+=== C=A^2: TSOPF_FS_b300 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/TSOPF_FS_b300.mtx
+A: 29214 x 29214, nnz = 4400122
+SpGEMM flops = 14023656792
+
+Raw Tile SpGEMM v2: tiles_C = 880456, nnzC = 212471856
+  Step1 (tile structure) = 1.43 ms
+  Step2 (symbolic+scan)  = 6.82 ms
+  Step3 (numeric v2)     = 29.59 ms
+GPU time = 37.84 ms, GFlops = 741.26
+Done.
+
+=== C=A^2: TSOPF_RS_b2052_c1 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/TSOPF_RS_b2052_c1.mtx
+A: 25626 x 25626, nnz = 6761100
+SpGEMM flops = 53335853
+
+Raw Tile SpGEMM v2: tiles_C = 172018, nnzC = 30950093
+  Step1 (tile structure) = 0.82 ms
+  Step2 (symbolic+scan)  = 0.49 ms
+  Step3 (numeric v2)     = 1.09 ms
+GPU time = 2.41 ms, GFlops = 44.29
+Done.
+
+=== C=A^2: TSOPF_RS_b2383_c1 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/TSOPF_RS_b2383_c1.mtx
+A: 38120 x 38120, nnz = 16171169
+SpGEMM flops = 127949437
+
+Raw Tile SpGEMM v2: tiles_C = 380827, nnzC = 74318317
+  Step1 (tile structure) = 0.84 ms
+  Step2 (symbolic+scan)  = 0.93 ms
+  Step3 (numeric v2)     = 2.64 ms
+GPU time = 4.41 ms, GFlops = 58.07
+Done.
+
+=== C=A^2: TSOPF_RS_b2383 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/TSOPF_RS_b2383.mtx
+A: 38120 x 38120, nnz = 16171169
+SpGEMM flops = 127949437
+
+Raw Tile SpGEMM v2: tiles_C = 380827, nnzC = 74318317
+  Step1 (tile structure) = 0.85 ms
+  Step2 (symbolic+scan)  = 0.91 ms
+  Step3 (numeric v2)     = 2.63 ms
+GPU time = 4.39 ms, GFlops = 58.24
+Done.
+
+=== C=A^2: TSOPF_RS_b300_c2 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/TSOPF_RS_b300_c2.mtx
+A: 28338 x 28338, nnz = 2943887
+SpGEMM flops = 23017811
+
+Raw Tile SpGEMM v2: tiles_C = 74065, nnzC = 13311015
+  Step1 (tile structure) = 0.64 ms
+  Step2 (symbolic+scan)  = 0.26 ms
+  Step3 (numeric v2)     = 0.49 ms
+GPU time = 1.39 ms, GFlops = 33.01
+Done.
+
+=== C=A^2: TSOPF_RS_b300_c3 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/TSOPF_RS_b300_c3.mtx
+A: 42138 x 42138, nnz = 4413449
+SpGEMM flops = 34508933
+
+Raw Tile SpGEMM v2: tiles_C = 110314, nnzC = 19956888
+  Step1 (tile structure) = 0.65 ms
+  Step2 (symbolic+scan)  = 0.37 ms
+  Step3 (numeric v2)     = 0.71 ms
+GPU time = 1.73 ms, GFlops = 39.92
+Done.
+
+=== C=A^2: TSOPF_RS_b678_c1 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/TSOPF_RS_b678_c1.mtx
+A: 18696 x 18696, nnz = 4396289
+SpGEMM flops = 34651853
+
+Raw Tile SpGEMM v2: tiles_C = 95120, nnzC = 20094405
+  Step1 (tile structure) = 0.66 ms
+  Step2 (symbolic+scan)  = 0.38 ms
+  Step3 (numeric v2)     = 0.72 ms
+GPU time = 1.75 ms, GFlops = 39.61
+Done.
+
+=== C=A^2: TSOPF_RS_b678_c2 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/TSOPF_RS_b678_c2.mtx
+A: 35696 x 35696, nnz = 8781949
+SpGEMM flops = 69226453
+
+Raw Tile SpGEMM v2: tiles_C = 185279, nnzC = 40139105
+  Step1 (tile structure) = 0.85 ms
+  Step2 (symbolic+scan)  = 0.51 ms
+  Step3 (numeric v2)     = 1.38 ms
+GPU time = 2.74 ms, GFlops = 50.56
+Done.
+
+=== C=A^2: tsyl201 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/tsyl201.mtx
+A: 20685 x 20685, nnz = 2454957
+SpGEMM flops = 308227437
+
+Raw Tile SpGEMM v2: tiles_C = 205565, nnzC = 8321013
+  Step1 (tile structure) = 0.76 ms
+  Step2 (symbolic+scan)  = 1.05 ms
+  Step3 (numeric v2)     = 3.35 ms
+GPU time = 5.16 ms, GFlops = 119.49
+Done.
+
+=== C=A^2: uk-2002 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/uk-2002.mtx
+A: 18520486 x 18520486, nnz = 298113762
+SpGEMM flops = 14603305014
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.85 ms
+  Step2 (symbolic+scan)  = 0.10 ms
+  Step3 (numeric v2)     = 0.03 ms
+GPU time = 0.97 ms, GFlops = 30030.16
+Done.
+
+=== C=A^2: vas_stokes_1M ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/vas_stokes_1M.mtx
+A: 1090664 x 1090664, nnz = 34767207
+SpGEMM flops = 985679918
+
+Raw Tile SpGEMM v2: tiles_C = 37587884, nnzC = 232207994
+  Step1 (tile structure) = 11.90 ms
+  Step2 (symbolic+scan)  = 96.18 ms
+  Step3 (numeric v2)     = 109.43 ms
+GPU time = 217.51 ms, GFlops = 9.06
+Done.
+
+=== C=A^2: vas_stokes_2M ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/vas_stokes_2M.mtx
+A: 2146677 x 2146677, nnz = 65129037
+SpGEMM flops = 1758734169
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.65 ms
+  Step2 (symbolic+scan)  = 0.09 ms
+  Step3 (numeric v2)     = 0.04 ms
+GPU time = 0.77 ms, GFlops = 4567.86
+Done.
+
+=== C=A^2: vas_stokes_4M ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/vas_stokes_4M.mtx
+A: 4382246 x 4382246, nnz = 131577616
+SpGEMM flops = 3553402698
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.67 ms
+  Step2 (symbolic+scan)  = 0.09 ms
+  Step3 (numeric v2)     = 0.03 ms
+GPU time = 0.79 ms, GFlops = 8978.32
+Done.
+
+=== C=A^2: vsp_bcsstk30_500sep_10in_1Kout ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/vsp_bcsstk30_500sep_10in_1Kout.mtx
+A: 58348 x 58348, nnz = 4033156
+SpGEMM flops = 339135198
+
+Raw Tile SpGEMM v2: tiles_C = 13300609, nnzC = 18175907
+  Step1 (tile structure) = 20.50 ms
+  Step2 (symbolic+scan)  = 1828.29 ms
+  Step3 (numeric v2)     = 1530.06 ms
+GPU time = 3378.85 ms, GFlops = 0.20
+Done.
+
+=== C=A^2: vsp_msc10848_300sep_100in_1Kout ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/vsp_msc10848_300sep_100in_1Kout.mtx
+A: 21996 x 21996, nnz = 2442056
+SpGEMM flops = 324579262
+
+Raw Tile SpGEMM v2: tiles_C = 1890625, nnzC = 12828344
+  Step1 (tile structure) = 17.31 ms
+  Step2 (symbolic+scan)  = 382.51 ms
+  Step3 (numeric v2)     = 368.73 ms
+GPU time = 768.55 ms, GFlops = 0.84
+Done.
+
+=== C=A^2: wb-edu ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/wb-edu.mtx
+A: 9845725 x 9845725, nnz = 57156537
+SpGEMM flops = 1559579990
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.82 ms
+  Step2 (symbolic+scan)  = 0.10 ms
+  Step3 (numeric v2)     = 0.03 ms
+GPU time = 0.95 ms, GFlops = 3295.15
+Done.
+
+=== C=A^2: webbase-1M ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/webbase-1M.mtx
+A: 1000005 x 1000005, nnz = 3105536
+SpGEMM flops = 69524195
+
+Raw Tile SpGEMM v2: tiles_C = 3447647, nnzC = 51111996
+  Step1 (tile structure) = 5.85 ms
+  Step2 (symbolic+scan)  = 4.39 ms
+  Step3 (numeric v2)     = 4.25 ms
+GPU time = 14.49 ms, GFlops = 9.59
+Done.
+
+=== C=A^2: wikipedia-20051105 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/wikipedia-20051105.mtx
+A: 1634989 x 1634989, nnz = 19753078
+SpGEMM flops = 2373873670
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.72 ms
+  Step2 (symbolic+scan)  = 0.10 ms
+  Step3 (numeric v2)     = 0.04 ms
+GPU time = 0.85 ms, GFlops = 5607.43
+Done.
+
+=== C=A^2: wikipedia-20060925 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/wikipedia-20060925.mtx
+A: 2983494 x 2983494, nnz = 37269096
+SpGEMM flops = 5015045714
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.77 ms
+  Step2 (symbolic+scan)  = 0.09 ms
+  Step3 (numeric v2)     = 0.04 ms
+GPU time = 0.90 ms, GFlops = 11151.29
+Done.
+
+=== C=A^2: wikipedia-20061104 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/wikipedia-20061104.mtx
+A: 3148440 x 3148440, nnz = 39383235
+SpGEMM flops = 5364494074
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.74 ms
+  Step2 (symbolic+scan)  = 0.09 ms
+  Step3 (numeric v2)     = 0.04 ms
+GPU time = 0.87 ms, GFlops = 12370.62
+Done.
+
+=== C=A^2: wikipedia-20070206 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/wikipedia-20070206.mtx
+A: 3566907 x 3566907, nnz = 45030389
+SpGEMM flops = 6398018911
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.82 ms
+  Step2 (symbolic+scan)  = 0.09 ms
+  Step3 (numeric v2)     = 0.04 ms
+GPU time = 0.94 ms, GFlops = 13582.75
+Done.
+
+=== C=A^2: wiki-topcats ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/wiki-topcats.mtx
+A: 1791489 x 1791489, nnz = 28511807
+SpGEMM flops = 2662974839
+CUDA error: invalid configuration argument
+
+Raw Tile SpGEMM v2: tiles_C = 0, nnzC = 0
+  Step1 (tile structure) = 0.74 ms
+  Step2 (symbolic+scan)  = 0.09 ms
+  Step3 (numeric v2)     = 0.04 ms
+GPU time = 0.86 ms, GFlops = 6168.63
+Done.
+
+=== C=A^2: x104 ===
+Device [0] NVIDIA A100 80GB PCIe
+Loading /scratch/general/vast/u1446071/spgemm_matrices/x104.mtx
+A: 108384 x 108384, nnz = 10167624
+SpGEMM flops = 1046272464
+
+Raw Tile SpGEMM v2: tiles_C = 629216, nnzC = 38701728
+  Step1 (tile structure) = 0.90 ms
+  Step2 (symbolic+scan)  = 1.59 ms
+  Step3 (numeric v2)     = 6.82 ms
+GPU time = 9.31 ms, GFlops = 224.71
+Done.
+
+=== Benchmark complete: Sun Mar 29 22:40:28 MDT 2026 ===
+Results saved to: /uufs/chpc.utah.edu/common/home/u1446071/repos/gpu_spgemm_bench/results/gpuspgemm_full_a100_20260329_203443.txt
